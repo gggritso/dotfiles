@@ -1,0 +1,30 @@
+{
+	"auto_complete_commit_on_tab": true,
+	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+	"theme": "Soda Dark.sublime-theme",
+	"soda_classic_tabs": true,
+	"font_face": "Inconsolata-dz",
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 14.0,
+	"ignored_packages":
+	[
+	],
+	"vintage_start_in_command_mode": true,
+	"scroll_past_end": true,
+	"shift_tab_unindent": true,
+	"tab_size": 4,
+	"todo":
+	{
+		"folder_exclude_patterns":
+		[
+			"venv"
+		],
+		"result_title": "TODO Results"
+	},
+	"translate_tabs_to_spaces": false,
+	"trim_trailing_white_space_on_save": true,
+	"ensure_newline_at_eof_on_save": true
+}

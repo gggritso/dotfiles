@@ -1,0 +1,72 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+symlinker
+~~~~~~~~~
+
+Loads my dotfiles into the user environment. Easy enough. Inspired by Zach
+Holman's Symlink stuff, but I wanted to have it in Python so I could easily
+maintain and change everything myself.
+
+It also takes care of some more complicated stuff for Sublime Text, skipping
+the local symlinks, etc. It's actually quite crap, really, but I only had to
+run it once.
+
+"""
+
+import os
+from glob import glob
+
+
+def attempt_symlink(old_filepath, new_filepath):
+
+    print 'Symlinking:', old_filepath, new_filepath
+
+    return None
+
+    if not os.path.exists(new_filepath):
+        # Easy. Make the do.
+        os.symlink(old_filepath, new_filepath)
+        return True
+
+    r = raw_input('File %s exists. Overwrite? y/n: ' % new_filepath)
+    if r == 'y':
+        os.remove(new_filepath)
+        os.symlink(old_filepath, new_filepath)
+        return True
+    else:
+        return False
+
+
+# Setup
+source_prefix = os.path.expanduser('~/.dotfiles/')
+destination_prefix = os.path.expanduser('~/')
+
+# First, symlink the easy files
+os.chdir(source_prefix)
+files = glob('*.symlink')
+for filename in files:
+    old_filepath = os.path.join(source_prefix, filename)
+    new_filepath = os.path.join(destination_prefix, '.' + filename[:-8])
+
+    attempt_symlink(old_filepath, new_filepath)
+
+
+# Symlink the theme
+old_filepath = os.path.join(source_prefix, 'zsh/gggritso.zsh-theme')
+new_filepath = os.path.join(destination_prefix, '.oh-my-zsh', 'themes',
+    'gggritso.zsh-theme')
+attempt_symlink(old_filepath, new_filepath)
+
+
+# Symlink Sublime Files
+os.chdir(os.path.join(source_prefix, 'sublime'))
+source_prefix = os.path.join(source_prefix, 'sublime')
+destination_prefix = os.path.expanduser('~/Library/Application Support/Sublime Text 2/Packages/User/')
+files = glob('*sublime*')
+for filename in files:
+    old_filepath = os.path.join(source_prefix, filename)
+    new_filepath = os.path.join(destination_prefix, filename)
+
+    attempt_symlink(old_filepath, new_filepath)

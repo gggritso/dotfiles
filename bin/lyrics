@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""
+lyrics
+~~~~~~
+
+A quick script that pulls in plaintext lyrics for a song. Inspired by Holman's
+dotfiles, who got it from https://gist.github.com/1549979
+
+The only change I made is run it in Python, and it asks for the title and artist
+manually instead of pulling from iTunes.
+
+"""
+
+import sys
+import requests
+
+params = {
+    'artist': sys.argv[1],
+    'title': sys.argv[2]
+}
+
+lyrics = requests.get('http://makeitpersonal.co/lyrics', data=params).content
+print lyrics

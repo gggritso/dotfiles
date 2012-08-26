@@ -1,0 +1,25 @@
+# general zsh config
+ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="gggritso"
+
+plugins=(osx brew fabric pip npm)
+
+autoload -U compinit
+compinit
+
+autoload colors
+colors
+
+export CLICOLOR=true
+eval `gdircolors ~/.dircolors`
+
+# Load up GRC
+source "`brew --prefix grc`/etc/grc.bashrc"
+
+export PATH=~/.dotfiles/bin:/usr/local/share/python:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/Cellar/ruby/1.9.3-p194/bin
+
+# source all the zsh files
+source $ZSH/oh-my-zsh.sh
+for zsh_source in $HOME/.dotfiles/zsh/*.zsh; do
+  source $zsh_source
+done

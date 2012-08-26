@@ -1,0 +1,22 @@
+[ui]
+username = George Gritsouk <george.gritsouk@gmail.com>
+merge = internal:merge
+
+[web]
+cacerts = /etc/hg-dummy-cert.pem
+
+[extensions]
+graphlog =
+bookmarks =
+histedit = /opt/histedit/hg_histedit.py
+color=
+mercurial_keyring=
+rebase=
+hggit=
+
+[alias]
+slog = log --style "~/.dotfiles/slog.hg-template"
+nudge = push --rev .
+
+[diff]
+git = True

@@ -1,0 +1,41 @@
+set nocompatible
+syntax enable
+set encoding=utf-8
+set nobomb
+set showcmd                     " display incomplete commands
+
+"" Visual
+colorscheme solarized
+set guifont=Inconsolata-dz:h12
+set background=dark
+set anti
+set number
+set ruler
+set showmatch
+
+set laststatus=2                " always show status line
+set statusline=%t\ [%l,\ %c]\ %P
+
+"" Whitespace
+set linebreak
+set tabstop=4 shiftwidth=4      " a tab is four spaces
+set softtabstop=4
+set expandtab                   " use spaces, not tabs
+set backspace=indent,eol,start  " backspace through everything in insert mode
+
+"" Searching
+""set hlsearch                    " highlight matches
+set incsearch                   " incremental searching
+set ignorecase                  " searches are case insensitive...
+set smartcase                   " ... unless they contain at least one capital letter
+
+"" Remapping
+inoremap jj <ESC>
+inoremap kk <ESC>
+inoremap jk <ESC>
+" use comma as <Leader> key instead of backslash
+let mapleader=","
+
+"" Re-highlight after indent in vidual mode
+vnoremap < <gv
+vnoremap > >gv
