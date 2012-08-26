@@ -12,4 +12,4 @@ alias ve=". venv/bin/activate"
 
 alias die="exit"
 
-alias e="subl -w"
+alias e="subl -n"
