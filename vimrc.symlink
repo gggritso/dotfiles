@@ -1,41 +1,170 @@
-set nocompatible
-syntax enable
-set encoding=utf-8
-set nobomb
-set showcmd                     " display incomplete commands
 
-"" Visual
+" Fish hates NeoBundle, apparently, since it's not POSIX compliant
+if $SHELL =~ 'bin/fish'
+  set shell=/bin/sh
+endif
+
+set nocompatible
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'bling/vim-airline'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'myusuf3/numbers.vim'
+
+NeoBundle 'tommcdo/vim-exchange'
+NeoBundle 'nelstrom/vim-visual-star-search'
+NeoBundle 'tpope/vim-unimpaired'
+
+NeoBundle 'sjl/gundo.vim'
+
+NeoBundle 'kien/rainbow_parentheses.vim'
+
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-speeddating'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'Raimondi/delimitMate'
+
+NeoBundle 'marcweber/vim-addon-mw-utils'
+NeoBundle 'tomtom/tlib_vim'
+NeoBundle 'garbas/vim-snipmate'
+NeoBundle 'honza/vim-snippets'
+
+NeoBundle 'plasticboy/vim-markdown'
+" NeoBundle 'pangloss/vim-javascript'
+
+NeoBundle 'altercation/vim-colors-solarized'
+
+call neobundle#end()
+
+filetype plugin indent on
+
+NeoBundleCheck
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_section_c = ''
+let g:airline_section_y = ''
+let g:airline_section_z = '%l:%c'
+
+let g:ctrlp_show_hidden = 1
+
+set encoding=utf-8
+
+syntax enable
+set background=light
 colorscheme solarized
-set guifont=Inconsolata-dz:h12
-set background=dark
-set anti
+set guifont=Fantasque\ Sans\ Mono:h18
+
+set autoindent
+set smartindent
+set backspace=indent,eol,start
+
+set undofile
+
 set number
-set ruler
+set relativenumber
+set modelines=0
+set scrolloff=5
+set hidden
+set visualbell
+set ttyfast
+set laststatus=2
+set showcmd
+set foldmethod=manual
+set foldlevel=10
+
+set noshowmode
+
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
 set showmatch
 
-set laststatus=2                " always show status line
-set statusline=%t\ [%l,\ %c]\ %P
+set wrap linebreak
 
-"" Whitespace
-set linebreak
-set tabstop=4 shiftwidth=4      " a tab is four spaces
-set softtabstop=4
-set expandtab                   " use spaces, not tabs
-set backspace=indent,eol,start  " backspace through everything in insert mode
+set splitbelow
+set splitright
 
-"" Searching
-""set hlsearch                    " highlight matches
-set incsearch                   " incremental searching
-set ignorecase                  " searches are case insensitive...
-set smartcase                   " ... unless they contain at least one capital letter
+set wildmenu
+set wildmode=list:longest
+set wildignore+=*.py?
+set wildignore+=*.sw?
+set wildignore+=*.png,&.jpeg
+set wildignore+=*.orig
+set wildignore+=venv
+set wildignore+=node_modules
 
-"" Remapping
-inoremap jj <ESC>
-inoremap kk <ESC>
-inoremap jk <ESC>
-" use comma as <Leader> key instead of backslash
-let mapleader=","
+" Auto Commands
+au FocusLost * wa
+au BufWritePre * :call <SID>StripTrailingWhitespaces()
 
-"" Re-highlight after indent in vidual mode
-vnoremap < <gv
-vnoremap > >gv
+" Keybindings
+let mapleader = ","
+nnoremap <tab> %
+vnoremap <tab> %
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+nnoremap <leader>p :CtrlP<cr>
+nnoremap <leader>g :GundoToggle<cr>
+nnoremap <leader>a :Ack
+
+nnoremap <C-tab> :bn<cr>
+nnoremap <C-S-tab> :bp<cr>
+
+nnoremap / /\v
+vnoremap / /\v
+
+nnoremap <D-1> :buffer 1<cr>
+vnoremap <D-1> :buffer 1<cr>
+
+nnoremap <D-2> :buffer 2<cr>
+vnoremap <D-2> :buffer 2<cr>
+
+nnoremap <D-3> :buffer 3<cr>
+vnoremap <D-3> :buffer 3<cr>
+
+nnoremap <D-4> :buffer 4<cr>
+vnoremap <D-4> :buffer 4<cr>
+
+nnoremap <D-5> :buffer 5<cr>
+vnoremap <D-5> :buffer 5<cr>
+
+nnoremap <D-6> :buffer 6<cr>
+vnoremap <D-6> :buffer 6<cr>
+
+nnoremap <D-7> :buffer 7<cr>
+vnoremap <D-7> :buffer 7<cr>
+
+nnoremap <D-8> :buffer 8<cr>
+vnoremap <D-8> :buffer 8<cr>
+
+nnoremap <D-9> :buffer 9<cr>
+vnoremap <D-9> :buffer 9<cr>
+
+nnoremap <D-0> :blast<cr>
+vnoremap <D-0> :blast<cr>
+
+imap <C-J> <Plug>snipMateNextOrTrigger
+
+" Functions
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
