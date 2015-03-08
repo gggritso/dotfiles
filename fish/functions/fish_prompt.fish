@@ -3,7 +3,7 @@ function fish_prompt
 
   set_color $fish_color_cwd
   echo -n (prompt_pwd)" "
-  echo -n (hostname | cut -d . -f 1 )" "
+  echo -n "on "(hostname | cut -d . -f 1 )" "
 
   set_color red
   echo -n α" "
