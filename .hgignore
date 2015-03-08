@@ -1,7 +1,0 @@
-syntax: glob
-
-zsh/local.zsh
-*.sublime-workspace
-*.sublime-project
-
-.DS_Store

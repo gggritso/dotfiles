@@ -1,0 +1,3 @@
+function die
+  exit
+end

@@ -2,9 +2,21 @@
 	name = George Gritsouk
 	email = george.gritsouk@gmail.com
 [alias]
-	unstage = reset HEAD --
-	last = log -1 HEAD
+        unstage = reset HEAD --
+        discard = checkout --
+        nevermind = !git reset --hard HEAD && git clean -d -f
+        point = reset --soft
+        uncommit = reset --mixed HEAD~
+        invert = revert
+        last = log -1 HEAD --format=format:"%Cred%H"
+        summary = status -u -s
+        graph = log --graph -10 --format=format:'%Cgreen%h %Creset• %s (%cr by %cn) %Cred%d'
+        branchout = checkout -b
+        branches = branch -a
+        precommit = diff --cached --diff-algorithm=minimal -w
+	move = mv
 [core]
-	editor = subl
+        editor = vim
+        precomposeunicode = true
 [credential]
-	helper = osxkeychain
+        helper = osxkeychain

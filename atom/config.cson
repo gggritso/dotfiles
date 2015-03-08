@@ -1,0 +1,49 @@
+"*":
+  "exception-reporting":
+    userId: "aee64c67-2d6c-8cca-033b-d5a1a45fdfa6"
+  "release-notes":
+    viewedVersion: "0.95.0"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "0731fbfc10b6e186b974811a6843fea629656bcb"
+  editor:
+    fontFamily: "Fantasque Sans Mono"
+    fontSize: 17
+    showInvisibles: true
+    preferredLineLength: 100
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    scrollPastEnd: true
+    undoGroupingInterval: 150
+    invisibles: {}
+  core:
+    followSymlinks: true
+    disabledPackages: [
+      "linter-pep8"
+      "editor-stats"
+      "archive-view"
+      "autoflow"
+      "background-tips"
+      "bookmarks"
+      "autocomplete"
+      "link"
+      "markdown-preview"
+      "metrics"
+      "open-on-github"
+      "release-notes"
+      "styleguide"
+      "welcome"
+    ]
+    themes: [
+      "one-light-ui"
+      "solarized-light-syntax"
+    ]
+    audioBeep: false
+  "tree-view":
+    hideVcsIgnoredFiles: true
+    hideIgnoredNames: true
+  linter: {}
+  "linter-flake8":
+    executableDir: "/usr/local/bin/"
+  emmet: {}

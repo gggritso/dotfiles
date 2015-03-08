@@ -11,7 +11,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'bling/vim-airline'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'myusuf3/numbers.vim'
 
@@ -35,7 +34,6 @@ NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'honza/vim-snippets'
 
 NeoBundle 'plasticboy/vim-markdown'
-" NeoBundle 'pangloss/vim-javascript'
 
 NeoBundle 'altercation/vim-colors-solarized'
 
@@ -44,12 +42,6 @@ call neobundle#end()
 filetype plugin indent on
 
 NeoBundleCheck
-
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_section_c = ''
-let g:airline_section_y = ''
-let g:airline_section_z = '%l:%c'
 
 let g:ctrlp_show_hidden = 1
 
@@ -102,7 +94,6 @@ set wildignore+=node_modules
 
 " Auto Commands
 au FocusLost * wa
-au BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " Keybindings
 let mapleader = ","
@@ -121,50 +112,4 @@ nnoremap <leader>a :Ack
 nnoremap <C-tab> :bn<cr>
 nnoremap <C-S-tab> :bp<cr>
 
-nnoremap / /\v
-vnoremap / /\v
-
-nnoremap <D-1> :buffer 1<cr>
-vnoremap <D-1> :buffer 1<cr>
-
-nnoremap <D-2> :buffer 2<cr>
-vnoremap <D-2> :buffer 2<cr>
-
-nnoremap <D-3> :buffer 3<cr>
-vnoremap <D-3> :buffer 3<cr>
-
-nnoremap <D-4> :buffer 4<cr>
-vnoremap <D-4> :buffer 4<cr>
-
-nnoremap <D-5> :buffer 5<cr>
-vnoremap <D-5> :buffer 5<cr>
-
-nnoremap <D-6> :buffer 6<cr>
-vnoremap <D-6> :buffer 6<cr>
-
-nnoremap <D-7> :buffer 7<cr>
-vnoremap <D-7> :buffer 7<cr>
-
-nnoremap <D-8> :buffer 8<cr>
-vnoremap <D-8> :buffer 8<cr>
-
-nnoremap <D-9> :buffer 9<cr>
-vnoremap <D-9> :buffer 9<cr>
-
-nnoremap <D-0> :blast<cr>
-vnoremap <D-0> :blast<cr>
-
 imap <C-J> <Plug>snipMateNextOrTrigger
-
-" Functions
-function! <SID>StripTrailingWhitespaces()
-    " Preparation: save last search, and cursor position.
-    let _s=@/
-    let l = line(".")
-    let c = col(".")
-    " Do the business:
-    %s/\s\+$//e
-    " Clean up: restore previous search history, and cursor position
-    let @/=_s
-    call cursor(l, c)
-endfunction
