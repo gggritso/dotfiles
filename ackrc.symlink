@@ -1,0 +1,11 @@
+--type-set=sass=.scss,.sass
+--type-set=php=.php,.inc,.module
+--type-set=html=.html,.erb,.haml,.jade,.hbs
+--type-set=css=.css,.scss,.sass,.less
+--ignore-dir=.git
+--ignore-dir=node_modules
+--ignore-dir=bower_components
+--ignore-file=ext:orig
+--ignore-file=ext:log
+--context=1
+--smart-case
