@@ -1,3 +1,3 @@
 function l
-  ls -hF $argv
+  gls -hF --color $argv
 end
