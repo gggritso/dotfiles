@@ -7,5 +7,6 @@
 --ignore-dir=bower_components
 --ignore-file=ext:orig
 --ignore-file=ext:log
+--ignore-file=is:tags
 --context=1
 --smart-case
