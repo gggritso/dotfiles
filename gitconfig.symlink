@@ -22,5 +22,6 @@
 [core]
   editor = vim
   precomposeunicode = true
+  excludesfile = ~/.gitignore_global
 [credential]
   helper = osxkeychain
