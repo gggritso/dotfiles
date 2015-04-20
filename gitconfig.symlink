@@ -5,23 +5,26 @@
   unstage = reset HEAD --
   discard = checkout --
   nevermind = !git reset --hard HEAD && git clean -d -f
-  point = reset --soft
   uncommit = reset --mixed HEAD~
   save = commit -m
   invert = revert
   last = log -1 HEAD --format=format:"%Cred%H"
   summary = status -u -s
-  graph = log --graph -10 --format=format:'%Cgreen%h %Creset• %s (%cr by %cn) %Cred%d' --author-date-order
-  jira = log --format=format:'%cn committed %h %ai \n%s\n' --grep
+  graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --author-date-order
   branchout = checkout -b
   branches = branch -a
+  tags = tag
+  stashes = stash list
   precommit = diff --cached --diff-algorithm=minimal -w
   move = mv
   remove = rm
   unmerged = branch --no-merged
+  unstash = stash pop
 [core]
   editor = vim
   precomposeunicode = true
   excludesfile = ~/.gitignore_global
 [credential]
   helper = osxkeychain
+[mailmap]
+  file = ~/.mailmap
