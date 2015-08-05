@@ -15,4 +15,25 @@
 # 'body':
 #   'ctrl-P': 'core:move-up'
 #   'ctrl-p': 'core:move-down'
-#
+
+'atom-text-editor':
+  'cmd-k k': 'window:focus-pane-above'
+  'cmd-k j': 'window:focus-pane-below'
+  'cmd-k h': 'window:focus-pane-on-left'
+  'cmd-k l': 'window:focus-pane-on-right'
+
+'.platform-darwin atom-text-editor:not([mini])':
+  'shift-cmd-R': 'atom-ctags:toggle-project-symbols'
+
+# Stop emmet from hijacking tab from snippets and autocomplete
+'atom-text-editor.autocomplete-active:not([mini])':
+  'tab': 'autocomplete-plus:confirm'
+
+# Stop emmet from hijacking tab from snippet tab stops
+'atom-text-editor[data-grammar="text html basic"]:not([mini]), atom-text-editor[data-grammar~="jade"]:not([mini]), atom-text-editor[data-grammar~="css"]:not([mini]), atom-text-editor[data-grammar~="sass"]:not([mini])':
+  'tab': 'snippets:next-tab-stop'
+
+# Cursor history
+'atom-text-editor.vim-mode.normal-mode':
+  'ctrl-i': 'cursor-history:next'
+  'ctrl-o': 'cursor-history:prev'

@@ -2,15 +2,16 @@
   name = George Gritsouk
   email = george.gritsouk@gmail.com
 [alias]
-  unstage = reset HEAD --
+  unstage = reset -q HEAD --
   discard = checkout --
   nevermind = !git reset --hard HEAD && git clean -d -f
   uncommit = reset --mixed HEAD~
   save = commit -m
+  resave = commit --amend
   invert = revert
   last = log -1 HEAD --format=format:"%Cred%H"
   summary = status -u -s
-  graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --author-date-order
+  graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
   branchout = checkout -b
   branches = branch -a
   tags = tag
@@ -20,6 +21,10 @@
   remove = rm
   unmerged = branch --no-merged
   unstash = stash pop
+  what = show -w
+  untrack = rm -r --cached 
+  rewrite = rebase -i 
+  amend = commit --amend
 [core]
   editor = vim
   precomposeunicode = true
