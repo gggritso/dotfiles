@@ -1,0 +1,51 @@
+{
+  "rules": {
+    "indent": [ 2, 2, {"SwitchCase": 1} ],
+    "linebreak-style": [ 2, "unix" ],
+    "eol-last": 1,
+    "no-multi-spaces": 1,
+    "quotes": [ 1, "single", "avoid-escape" ],
+    "semi": [ 2, "always" ],
+    "array-bracket-spacing": [ 1, "always", { "objectsInArrays": false } ],
+    "comma-spacing": [ 1, {"before": false, "after": true} ],
+    "comma-dangle": [ 1, "always-multiline" ],
+    "camelcase": [ 2, { "properties": "never"} ],
+    "space-in-parens": [ 1, "always", { "exceptions": ["{}", "[]", "empty"] }],
+    "space-before-function-paren": [ 1, "never" ],
+    "space-before-blocks": [ 1, "always" ],
+    "space-after-keywords": [ 1, "always" ],
+    "space-before-keywords": [ 1, "always" ],
+    "object-curly-spacing": [ 1, "always" ],
+    "brace-style": [1, "1tbs", { "allowSingleLine": true } ],
+    "no-nested-ternary": 1,
+    "no-unused-vars": [ 2, { "argsIgnorePattern": "event"}],
+    "no-console": 0,
+    "max-depth": [2, 4],
+    "dot-notation": 1,
+    "eqeqeq": 2,
+    "no-implied-eval": 2,
+    "no-loop-func": 1,
+    "radix": 2,
+    "no-magic-numbers": [ 1, { "ignore": [ 0, 1, 2, -1, 10 ] }],
+    "complexity": [2, 10],
+    "yoda": [ 2, "never" ]
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jasmine": true
+  },
+  "globals": {
+    "angular": true,
+    "inject": true,
+    "_": true,
+    "google": true,
+    "jQuery": true,
+    "$": true,
+    "moment": true,
+    "bowser": true,
+    "__fixtures__": true,
+    "FastClick": true
+  },
+  "extends": "eslint:recommended"
+}
