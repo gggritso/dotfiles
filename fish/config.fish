@@ -1,6 +1,6 @@
-set -x PATH $HOME/.rbenv/shims $HOME/.rbenv/bin /usr/local/sbin $PATH
+status --is-interactive; and . (rbenv init -|psub)
 
-rbenv rehash >/dev/null ^&1
+set -x PATH ~/.rbenv/shims /usr/local/sbin $PATH
 
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showupstream 'yes'
@@ -11,3 +11,5 @@ set __fish_git_prompt_char_upstream_prefix ''
 set __fish_git_prompt_char_upstream_ahead ' ↑'
 set __fish_git_prompt_char_upstream_behind ' ↓'
 set __fish_git_prompt_char_upstream_equal ''
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
