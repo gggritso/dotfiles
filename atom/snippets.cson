@@ -29,6 +29,106 @@
     expect( $2 ).to$3;
   });"""
 
+  'Angular Controller':
+    'prefix': 'controller',
+    'body': """(function() {
+      'use strict';
+
+      angular
+        .module( '${1:myModule}' )
+        .controller( '${2:MyController}', ${2:MyController} );
+
+      function ${2:MyController}() {
+        var ${3:vm} = this;
+
+        activate();
+
+        // // // // //
+
+        function activate() {
+
+        }
+
+
+      }
+
+    }());"""
+
+  'Angular Factory':
+    'prefix': 'factory',
+    'body': """(function() {
+      'use strict';
+
+      angular
+        .module( '${1:myModule}' )
+        .factory( '${2:MyFactory}', ${2:MyFactory} );
+
+      function ${2:MyFactory}() {
+
+        return {
+          ${3:method}: ${3:method};
+        };
+
+        // // // // //
+
+        function ${3:method}() {
+
+        }
+
+
+      }
+
+    }());"""
+
+  'Angular Directive':
+    'prefix': 'directive',
+    'body': """
+    (function() {
+      'use strict';
+
+      angular
+        .module( '${1:mct}' )
+        .directive( '${2:myDirective}', ${2:myDirective} );
+
+      function ${2:myDirective}() {
+
+        return {
+          restrict: '${3:E}',
+
+          scope: {$4},
+
+          controller: ${2:myDirective}Controller,
+          controllerAs: '${5:directive}',
+          bindToController: true,
+
+          link: link,
+        };
+
+        // // // // //
+
+        function ${2:myDirective}Controller () {
+          var ${5:directive} = this;
+
+          activate();
+
+          // // // // //
+
+          function activate() {
+
+          }
+
+        }
+
+
+        function link {
+
+        }
+
+
+      }
+
+    }()); """
+
 '.source.python':
   'Encoding specifier':
     'prefix': '# '
