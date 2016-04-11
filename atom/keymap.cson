@@ -17,10 +17,10 @@
 #   'ctrl-p': 'core:move-down'
 
 'atom-text-editor':
-  'cmd-k k': 'window:focus-pane-above'
-  'cmd-k j': 'window:focus-pane-below'
-  'cmd-k h': 'window:focus-pane-on-left'
-  'cmd-k l': 'window:focus-pane-on-right'
+  'cmd-k k': 'pane:split-up'
+  'cmd-k j': 'pane:split-down'
+  'cmd-k h': 'pane:split-left'
+  'cmd-k l': 'pane:split-right'
 
 '.platform-darwin atom-text-editor:not([mini])':
   'shift-cmd-R': 'atom-ctags:toggle-project-symbols'
