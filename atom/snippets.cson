@@ -15,6 +15,27 @@
 #
 
 '.source.js':
+
+  'IIFE':
+    'prefix': 'iife'
+    'body': '( function() {\n  ${1:\'use strict\';\n}  $2\n})();'
+
+  'Anonymous Function':
+    'prefix': 'f'
+    'body': 'function( $1 ) {\n\t$2\n}'
+
+  'Promise Success Callback':
+    'prefix': '.then'
+    'body': '.then( function $1( $2 ) {\n\t$3\n})'
+
+  'Promise Error Callback':
+    'prefix': '.catch'
+    'body': '.catch( function $1( $2 ) {\n\t$3\n})'
+
+  'Require':
+    'prefix': 'req'
+    'body': '${1:module} = require( \'${1:module}\' ),'
+
   'Jasmine Test Suite':
     'prefix': 'describe'
     'body': """describe( '$1', function() {
