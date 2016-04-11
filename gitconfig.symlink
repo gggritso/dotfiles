@@ -17,7 +17,7 @@
   branches = branch -a
   tags = tag
   stashes = stash list
-  prestage = diff -w --word-diff=color
+  prestage = diff -w --word-diff=color --word-diff-regex='[^[:space:]<>]+'
   precommit = diff --cached -w --word-diff=color --word-diff-regex='[^[:space:]<>]+'
   move = mv
   remove = rm
@@ -39,6 +39,7 @@
   editor = vim
   precomposeunicode = true
   excludesfile = ~/.gitignore_global
+  untrackedCache = true
 [credential]
   helper = osxkeychain
 [merge]
