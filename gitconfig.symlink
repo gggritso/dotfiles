@@ -14,9 +14,10 @@
   graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %ar) %Cred%d' --date-order
   history = log -10 --format=format:'%Cgreen%h %Creset• %s (%cN, %ar)'
   branchout = checkout -b
-  branches = branch -a
   tags = tag
+  branches = branch -a
   stashes = stash list
+  remotes = remote -v
   prestage = diff -w --word-diff=color
   precommit = diff --cached -w --word-diff=color --word-diff-regex='[^[:space:]<>]+'
   move = mv
@@ -31,6 +32,7 @@
   contributors = shortlog -s -n
   filetrail = git log --follow -p -w
   mergetrail = log --ancestry-path --merges
+  unmerged = diff --name-only --diff-filter=U
 [blame]
   date = relative
 [push]
