@@ -30,7 +30,7 @@
   amend = commit --amend
   back = checkout "-"
   contributors = shortlog -s -n
-  filetrail = git log --follow -p -w
+  filetrail = log --follow -p -w
   mergetrail = log --ancestry-path --merges
   unmerged = diff --name-only --diff-filter=U
 [blame]
