@@ -14,23 +14,37 @@
   graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %ar) %Cred%d' --date-order
   history = log -10 --format=format:'%Cgreen%h %Creset• %s (%cN, %ar)'
   branchout = checkout -b
+  new-branch = checkout -b
+  rename-branch = branch -m
+  delete-branch = branch -D
   branches = branch -a
   tags = tag
   stashes = stash list
-  prestage = diff -w --word-diff=color --word-diff-regex='[^[:space:]<>]+'
-  precommit = diff --cached -w --word-diff=color --word-diff-regex='[^[:space:]<>]+'
+  prestage = diff
+  precommit = diff --cached
   move = mv
   remove = rm
   unmerged = branch --no-merged
   unstash = stash pop
-  what = show -w
+  what = show
   untrack = rm -r --cached
   rewrite = rebase -i
-  amend = commit --amend
+  amend = commit --amend --no-edit
   back = checkout "-"
   contributors = shortlog -s -n
-  filetrail = git log --follow -p -w
-  mergetrail = log --ancestry-path --merges
+  file-trail = log --follow -p
+  merge-trail = log --ancestry-path --merges
+  patch = add --patch
+  tuck = stash save
+  untuck = stash pop "stash@{0}"
+[diff]
+  compactionHeuristic = true
+[interactive]
+  diffFilter = diff-highlight
+[pager]
+  diff = diff-highlight | less
+  log = diff-highlight | less
+  show = diff-highlight | less
 [blame]
   date = relative
 [push]
