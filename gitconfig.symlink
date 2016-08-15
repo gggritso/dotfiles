@@ -13,15 +13,16 @@
   summary = status -u -s
   graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %ar) %Cred%d' --date-order
   history = log -10 --format=format:'%Cgreen%h %Creset• %s (%cN, %ar)'
-  branchout = checkout -b
   new-branch = checkout -b
   rename-branch = branch -m
   delete-branch = branch -D
   branches = branch -a
   tags = tag
+  branches = branch -a
   stashes = stash list
   prestage = diff
   precommit = diff --cached
+  remotes = remote -v
   move = mv
   remove = rm
   unmerged = branch --no-merged
