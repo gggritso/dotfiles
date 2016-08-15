@@ -10,8 +10,14 @@
 
 atom-text-editor::shadow {
 
-  .invisible-character {
+
+  .invisible-character,
+  .indent-guide {
     opacity: 0.4;
+  }
+
+  .git-line-removed::before {
+    display: none;
   }
 
 }
