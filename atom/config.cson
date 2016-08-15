@@ -1,96 +1,214 @@
 "*":
-  editor:
-    invisibles: {}
-    showInvisibles: true
-    softWrap: true
-    softWrapAtPreferredLineLength: true
-    undoGroupingInterval: 200
-    scrollPastEnd: true
-    preferredLineLength: 100
-    fontFamily: "Fantasque Sans Mono"
-    nonWordCharacters: "_- :;\"“”‘’{}[]()!?.,|\\/!@#$%^&*+=<>'"
-    softWrapHangingIndent: 2
-    autoIndentOnPaste: false
-    fontSize: 16
-    lineHeight: 1.3
+  Zen:
+    fullscreen: false
+    gutter: true
+    minimap: true
+  "atom-beautify":
+    general:
+      _analyticsUserId: "5af7c023-4f31-4fff-af34-a7f5d841267e"
+  "atom-css-comb":
+    commonConfigs: "/Users/george.gritsouk/Code/.csscomb.json"
+  "atom-ctags": {}
+  "autocomplete-plus":
+    confirmCompletion: "tab"
+  autosave:
+    enabled: true
   core:
-    themes: [
-      "one-dark-ui"
-      "solarized-light-syntax"
-    ]
+    customFileTypes:
+      html: [
+        "tpl.php"
+        "tmpl.php"
+        "tmpl"
+      ]
+      php: [
+        "module"
+      ]
+    destroyEmptyPanes: false
     disabledPackages: [
       "background-tips"
       "symbols-view"
       "deprecation-cop"
-      "linter-rubocop"
+      "release-notes"
+      "archive-view"
+      "autocomplete-atom-api"
+      "autoflow"
+      "encoding-selector"
+      "language-c"
+      "language-clojure"
+      "language-csharp"
+      "language-go"
+      "language-mustache"
+      "language-objective-c"
+      "language-perl"
+      "language-toml"
+      "link"
+      "markdown-preview"
+      "open-on-github"
+      "package-generator"
+      "livestyle-atom"
+      "line-ending-selector"
+      "bookmarks"
+      "atom-ternjs"
+      "ex-mode"
     ]
-    destroyEmptyPanes: false
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "build/*"
+    ]
+    packagesWithKeymapsDisabled: [
+      "git-diff"
+    ]
+    themes: [
+      "one-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  "cursor-history": {}
+  editor:
+    fontFamily: "SF Mono"
+    invisibles:
+      space: " "
+    lineHeight: 1.3
+    nonWordCharacters: "_-:;\"“”‘’{}[]()!?.,|\\/!@#$%^&*+=<>'"
+    preferredLineLength: 100
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    softWrapHangingIndent: 2
+    undoGroupingInterval: 200
+  emmet:
+    useEmmetComments: false
+  "exception-reporting":
+    userId: "f0de6421-4e72-fc88-c804-4f31a41554cf"
+  "find-and-replace":
+    focusEditorAfterSearch: true
+    scrollToResultOnLiveSearch: true
+  "fuzzy-finder":
+    useAlternateScoring: true
+  "git-diff": {}
   linter:
-    lintOnChange: false
+    gutterPosition: "Left"
     lintDebug: true
+    lintOnChange: false
+    lintOnFly: false
+    showErrorPanel: false
+    showErrorTabFile: false
+    showErrorTabProject: false
+    statusIconScope: "File"
     subtleLinterErrors: [
       "jshint"
       "haml-lint"
     ]
-    showErrorPanel: false
-  "autocomplete-plus":
-    confirmCompletion: "tab"
-  "exception-reporting":
-    userId: "f0de6421-4e72-fc88-c804-4f31a41554cf"
-  welcome:
-    showOnStartup: false
-  "vim-surround": {}
-  "tree-view":
-    hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
-  whitespace:
-    ignoreWhitespaceOnCurrentLine: false
-  minimap:
-    plugins:
-      "git-diff": true
-  "linter-rubocop":
-    executablePath: "/Users/george.gritsouk/.rbenv/shims/rubocop"
-  "linter-jshint":
-    jshintExecutablePath: "/usr/local/bin/jshint"
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
+    eslintrcPath: "~/.eslintrc"
+    globalNodePath: "/usr/local"
+    useGlobalEslint: true
+  "linter-haml":
+    hamlLintExecutablePath: "/Users/george.gritsouk/.rbenv/shims/haml-lint"
   "linter-haml-lint":
     hamlLintExecutablePath: "/Users/george.gritsouk/.rbenv/versions/2.2.1/bin/haml-lint"
-  "atom-ctags": {}
-  "symbols-view":
-    useEditorGrammarAsCtagsLanguage: false
-  autosave:
-    enabled: true
+  "linter-htmlhint":
+    executablePath: "/usr/local/bin/htmlhint"
+  "linter-jshint":
+    jshintExecutablePath: "/usr/local/bin/jshint"
+    lintInlineJavaScript: true
   "linter-less":
+    ieCompatibilityChecks: false
+    ignoreUndefinedGlobalVariables: true
+    ignoreUndefinedVariables: true
     includePath: [
       "/Users/george.gritsouk/Code/drupal/sites/all/themes/custom/mercatus_theme/less/"
     ]
-  "relative-line-numbers":
-    showNormalLineNumbers: false
+  "linter-rubocop":
+    executablePath: "/Users/george.gritsouk/.rbenv/shims/rubocop"
+  "livestyle-atom": {}
+  minimap:
+    plugins:
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
   "one-dark-ui":
     layoutMode: "Compact"
-  emmet:
-    useEmmetComments: false
-  "linter-haml": {}
-  "cursor-history": {}
-".html.php.text":
+  "relative-line-numbers":
+    showNormalLineNumbers: false
+  "spell-check": {}
+  "split-diff":
+    ignoreWhitespace: true
+  "symbols-view":
+    useEditorGrammarAsCtagsLanguage: false
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  "vim-mode":
+    useSmartcaseForSearch: true
+  "vim-surround": {}
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+".console.python.text":
   editor:
+    nonWordCharacters: "_-:;\"“”‘’{}[]()!?.,|\\/!@#$%^&*+=<>'"
     preferredLineLength: 100
+    softWrapHangingIndent: 2
 ".erb.html.text":
   editor:
     nonWordCharacters: "_- :;\"“”‘’{}[]()!?.,|\\/!@#$%^&*+="
     preferredLineLength: 100
-".ini.source":
+".gfm.source":
   editor:
+    nonWordCharacters: "_-:;\"“”‘’{}[]()!?.,|\\/!@#$%^&*+=<>'"
     preferredLineLength: 100
+    softWrapAtPreferredLineLength: true
+    softWrapHangingIndent: 2
+".haml.text":
+  editor:
+    preferredLineLength: 120
+    softWrap: true
+    softWrapAtPreferredLineLength: false
 ".hamlc.text":
   editor:
     preferredLineLength: 100
     softWrap: false
     softWrapAtPreferredLineLength: false
-".haml.text":
+".html.php.text":
   editor:
+    preferredLineLength: 100
+    tabLength: 4
+".ini.source":
+  editor:
+    preferredLineLength: 100
+".js.source":
+  editor:
+    nonWordCharacters: "_-;:\"“”‘’'{}[]()!?.,|\\/!@#$%^&*+="
+    preferredLineLength: 100
     softWrap: true
-    softWrapAtPreferredLineLength: false
-    preferredLineLength: 120
+".php.source":
+  editor:
+    preferredLineLength: 10
+    tabLength: 4
+".python.regexp.source":
+  editor:
+    nonWordCharacters: "_-:;\"“”‘’{}[]()!?.,|\\/!@#$%^&*+=<>'"
+    preferredLineLength: 100
+    softWrapHangingIndent: 2
+".python.source":
+  editor:
+    nonWordCharacters: "_-:;\"“”‘’{}[]()!?.,|\\/!@#$%^&*+=<>'"
+    preferredLineLength: 100
+    softWrapHangingIndent: 2
+".python.text.traceback":
+  editor:
+    nonWordCharacters: "_-:;\"“”‘’{}[]()!?.,|\\/!@#$%^&*+=<>'"
+    preferredLineLength: 100
+    softWrapHangingIndent: 2
 ".ruby.source":
   editor:
     nonWordCharacters: "_- :;\"“”‘’{}[]()!?.,|\\/!@#$%^&*+="
