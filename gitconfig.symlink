@@ -29,7 +29,7 @@
   rewrite = rebase -i
   amend = commit --amend
   back = checkout "-"
-  contributors = shortlog -s -n
+  contributors = shortlog -s -n --no-merges
   filetrail = log --follow -p -w
   mergetrail = log --ancestry-path --merges
   unmerged = diff --name-only --diff-filter=U
