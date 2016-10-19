@@ -33,6 +33,7 @@
   filetrail = log --follow -p -w
   mergetrail = log --ancestry-path --merges
   unmerged = diff --name-only --diff-filter=U
+  aliases = !git config --get-regexp alias | sed 's/alias.//' | sed 's/ /: /'
 [blame]
   date = relative
 [push]
