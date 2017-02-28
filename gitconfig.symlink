@@ -17,6 +17,7 @@
   rename-branch = branch -m
   delete-branch = branch -D
   branches = branch -a
+  recent-branches = branch -a --sort=committerdate
   tags = tag
   branches = branch -a
   stashes = stash list
@@ -31,6 +32,7 @@
   untrack = rm -r --cached
   rewrite = rebase -i
   amend = commit --amend --no-edit
+  amend-message = commit --amend
   back = checkout "-"
   contributors = shortlog -s -n
   file-trail = log --follow -p
@@ -40,6 +42,8 @@
   untuck = stash pop "stash@{0}"
 [diff]
   compactionHeuristic = true
+  indentHeuristic = true
+  algorithm = patience
 [interactive]
   diffFilter = diff-highlight
 [pager]
