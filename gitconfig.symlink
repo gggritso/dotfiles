@@ -12,7 +12,7 @@
   last = log -1 HEAD --format=format:"%Cred%H"
   summary = status -u -s
   graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %ar) %Cred%d' --date-order
-  history = log -10 --format=format:'%Cgreen%h %Creset• %s (%cN, %ar)'
+  history = log -10 --format=format:'%Cgreen%h %Creset• %s (%aN, %ar)'
   new-branch = checkout -b
   rename-branch = branch -m
   delete-branch = branch -D
