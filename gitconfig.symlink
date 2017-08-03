@@ -20,7 +20,6 @@
   branches = branch -a
   recent-branches = branch -a --sort=committerdate
   branchout = checkout -b
-  new-branch = checkout -b
   tags = tag
   branches = branch -a
   stashes = stash list
