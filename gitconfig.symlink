@@ -16,6 +16,7 @@
   new-branch = checkout -b
   rename-branch = branch -m
   delete-branch = branch -D
+  track = branch --set-upstream-to
   branches = branch -a
   recent-branches = branch -a --sort=committerdate
   branchout = checkout -b
