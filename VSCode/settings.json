@@ -1,0 +1,66 @@
+{
+    "editor.fontFamily": "SF Mono",
+    "editor.fontSize": 14,
+    "editor.lineHeight": 20,
+    "editor.lineNumbers": "relative",
+    "editor.rulers": [
+        100
+    ],
+    "editor.wordWrapColumn": 100,
+    "editor.wordWrap": "bounded",
+    "editor.wrappingIndent": "indent",
+    "editor.tabSize": 2,
+    "editor.snippetSuggestions": "top",
+    "editor.insertSpaces": true,
+    "editor.renderWhitespace": "none",
+    "editor.renderIndentGuides": false,
+    "editor.trimAutoWhitespace": false,
+    "files.insertFinalNewline": true,
+    "editor.cursorStyle": "block",
+    "editor.cursorBlinking": "blink",
+    "editor.renderLineHighlight": "none",
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.autoIndent": true,
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "onWindowChange",
+    "terminal.external.osxExec": "iTerm.app",
+    "workbench.colorTheme": "Solarized Dark",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.sideBar.location": "right",
+    "files.associations": {
+        "*.module": "php",
+        "*.inc": "php",
+        "*.tmpl": "html"
+    },
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": true,
+    "git.confirmSync": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+    "scss.colorDecorators.enable": false,
+    "css.colorDecorators.enable": false,
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#082B37",
+        "statusBar.noFolderBackground": "#082B37",
+        "statusBar.debuggingBackground": "#082B37"
+    },
+    "search.useIgnoreFilesByDefault": true,
+    "window.zoomLevel": 0,
+    "window.nativeTabs": true,
+    "vim.handleKeys": {
+        "<D-d>": false
+    },
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors": {
+        "normal": "#082B37",
+        "insert": "#6c71c4",
+        "visual": "#cb4b16",
+        "visualline": "#cb4b16",
+        "visualblock": "#cb4b16",
+        "replace": "#cb4b16"
+    },
+    "vim.disableAnnoyingNeovimMessage": true
+}
