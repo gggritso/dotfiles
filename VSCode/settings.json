@@ -53,6 +53,18 @@
     "vim.handleKeys": {
         "<D-d>": false
     },
+    "vim.insertModeKeyBindings": [{
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+    }],
+    "vim.otherModesKeyBindingsNonRecursive": [{
+        "before": [":"],
+        "after": [],
+        "commands": [{
+            "command": "workbench.action.showCommands",
+            "args": []
+        }]
+    }],
     "vim.statusBarColorControl": true,
     "vim.statusBarColors": {
         "normal": "#082B37",
