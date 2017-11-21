@@ -1,61 +1,31 @@
+call plug#begin('~/.vim/plugged')
+Plug '/usr/local/opt/fzf'
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf.vim'
+call plug#end()
 
-" Fish hates NeoBundle, apparently, since it's not POSIX compliant
-if $SHELL =~ 'bin/fish'
-  set shell=/bin/sh
-endif
+" Bindings
+let mapleader = "\<space>"
+
+" Lightline
+set laststatus=2
+"let g:lightline = {
+" \ 'colorscheme': 'solarized dark',
+" \ }
+
+" fzf
+nmap <Leader>f :Files<CR>
 
 set nocompatible
-set runtimepath+=~/.vim/bundle/neobundle.vim/
-
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'myusuf3/numbers.vim'
-
-NeoBundle 'tommcdo/vim-exchange'
-NeoBundle 'nelstrom/vim-visual-star-search'
-NeoBundle 'tpope/vim-unimpaired'
-
-NeoBundle 'sjl/gundo.vim'
-
-NeoBundle 'kien/rainbow_parentheses.vim'
-
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-speeddating'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'Raimondi/delimitMate'
-
-NeoBundle 'marcweber/vim-addon-mw-utils'
-NeoBundle 'tomtom/tlib_vim'
-NeoBundle 'garbas/vim-snipmate'
-NeoBundle 'honza/vim-snippets'
-
-NeoBundle 'plasticboy/vim-markdown'
-
-NeoBundle 'altercation/vim-colors-solarized'
-
-call neobundle#end()
-
-filetype plugin indent on
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set noexpandtab
-
-NeoBundleCheck
-
-let g:ctrlp_show_hidden = 1
-
 set encoding=utf-8
 
+" Theme
 syntax enable
-set background=light
-colorscheme solarized
-set guifont=Fantasque\ Sans\ Mono:h18
+"set background=dark
+"colorscheme solarized
+set guifont=SF\ Mono:h18
 
+" Whitespace
 set autoindent
 set smartindent
 set backspace=indent,eol,start
@@ -67,9 +37,7 @@ set relativenumber
 set modelines=0
 set scrolloff=5
 set hidden
-set visualbell
 set ttyfast
-set laststatus=2
 set showcmd
 set foldmethod=manual
 set foldlevel=10
@@ -87,33 +55,4 @@ set wrap linebreak
 set splitbelow
 set splitright
 
-set wildmenu
-set wildmode=list:longest
-set wildignore+=*.py?
-set wildignore+=*.sw?
-set wildignore+=*.png,&.jpeg
-set wildignore+=*.orig
-set wildignore+=venv
-set wildignore+=node_modules
 
-" Auto Commands
-au FocusLost * wa
-
-" Keybindings
-let mapleader = ","
-nnoremap <tab> %
-vnoremap <tab> %
-
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-nnoremap <leader>p :CtrlP<cr>
-nnoremap <leader>g :GundoToggle<cr>
-nnoremap <leader>a :Ack
-
-nnoremap <C-tab> :bn<cr>
-nnoremap <C-S-tab> :bp<cr>
-
-imap <C-J> <Plug>snipMateNextOrTrigger
