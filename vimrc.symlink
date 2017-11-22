@@ -4,9 +4,12 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sleuth'
+
 Plug 'altercation/vim-colors-solarized'
 
 Plug 'mileszs/ack.vim'
+Plug 'w0rp/ale'
 call plug#end()
 
 set nocompatible
@@ -14,13 +17,16 @@ set encoding=utf-8
 
 " Bindings
 let mapleader = "\<space>"
+
 nmap j gj
 nmap k gk
 
-nmap <Leader>f :Files<CR>
+inoremap { {<CR>}<Esc>O
+
+nmap <Leader>t :Files<CR>
 nmap <Leader><Leader> :Buffers<CR>
 
-" TODO: ctrl-tab and shift-ctrl-tab for buffers
+nmap <Leader>f :Ack<Space>
 
 " TODO: ALE and ESLint
 
@@ -29,7 +35,25 @@ nmap <Leader><Leader> :Buffers<CR>
 " Ack
 let g:ackprg = 'ag --vimgrep'
 
+" ALE
+let g:ale_linters = {
+\ 'javascript': ['eslint'],
+\ }
+let g:ale_fixers = {
+\ 'javascript': ['eslint'],
+\ }
+let g:ale_sign_error = '!'
+let g:ale_sign_warning = '¡'
+
+" fzf
+let g:fzf_layout = { 'up': '~20%' }
+
+
 " Lightline
+function! ShortGitBranchName()
+  return strpart(fugitive#head(), 0, 30)
+endfunction
+
 set noshowmode
 set laststatus=2
 set cmdheight=1
@@ -40,13 +64,13 @@ let g:lightline = {
 \   'right': [ [ 'lineinfo' ] ],
 \ },
 \ 'component_function': {
-\   'gitbranch': 'fugitive#head',
+\   'gitbranch': 'ShortGitBranchName',
 \ },
 \ }
 
 " Theme
 syntax enable
-set guifont=SF\ Mono:h18
+set guifont=SF\ Mono:h16
 
 if has('gui_running')
     set background=dark
@@ -61,6 +85,8 @@ set backspace=indent,eol,start
 
 " Features
 set undofile
+set clipboard=unnamed
+set shortmess=I
 
 " UI
 set number
@@ -77,6 +103,7 @@ set splitbelow
 set splitright
 
 set wrap linebreak
+
 
 " Searching
 set ignorecase
