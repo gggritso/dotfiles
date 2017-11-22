@@ -6,6 +6,17 @@ call plug#end()
 
 " Bindings
 let mapleader = "\<space>"
+nmap j gj
+nmap k gk
+
+nmap <Leader>f :Files<CR>
+nmap <Leader><Leader> :Buffers<CR>
+
+" TODO: ctrl-tab and shift-ctrl-tab for buffers
+
+" TODO: ALE and ESLint
+
+" TODO: Emacs bindings in command mode
 
 " Lightline
 set laststatus=2
@@ -14,8 +25,6 @@ set laststatus=2
 " \ }
 
 " fzf
-nmap <Leader>f :Files<CR>
-
 set nocompatible
 set encoding=utf-8
 
