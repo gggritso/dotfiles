@@ -14,6 +14,17 @@ set encoding=utf-8
 
 " Bindings
 let mapleader = "\<space>"
+nmap j gj
+nmap k gk
+
+nmap <Leader>f :Files<CR>
+nmap <Leader><Leader> :Buffers<CR>
+
+" TODO: ctrl-tab and shift-ctrl-tab for buffers
+
+" TODO: ALE and ESLint
+
+" TODO: Emacs bindings in command mode
 
 " Ack
 let g:ackprg = 'ag --vimgrep'
@@ -32,9 +43,6 @@ let g:lightline = {
 \   'gitbranch': 'fugitive#head',
 \ },
 \ }
-
-" fzf
-nmap <Leader>t :Files<CR>
 
 " Theme
 syntax enable
