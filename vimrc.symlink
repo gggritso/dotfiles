@@ -1,37 +1,60 @@
 call plug#begin('~/.vim/plugged')
 Plug '/usr/local/opt/fzf'
-Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf.vim'
+
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'altercation/vim-colors-solarized'
+
+Plug 'mileszs/ack.vim'
 call plug#end()
-
-" Bindings
-let mapleader = "\<space>"
-
-" Lightline
-set laststatus=2
-"let g:lightline = {
-" \ 'colorscheme': 'solarized dark',
-" \ }
-
-" fzf
-nmap <Leader>f :Files<CR>
 
 set nocompatible
 set encoding=utf-8
 
+" Bindings
+let mapleader = "\<space>"
+
+" Ack
+let g:ackprg = 'ag --vimgrep'
+
+" Lightline
+set noshowmode
+set laststatus=2
+set cmdheight=1
+let g:lightline = {
+\ 'active': {
+\   'left': [ [ 'mode', 'paste' ],
+\           [ 'readonly', 'filename', 'modified', 'gitbranch' ] ],
+\   'right': [ [ 'lineinfo' ] ],
+\ },
+\ 'component_function': {
+\   'gitbranch': 'fugitive#head',
+\ },
+\ }
+
+" fzf
+nmap <Leader>t :Files<CR>
+
 " Theme
 syntax enable
-"set background=dark
-"colorscheme solarized
 set guifont=SF\ Mono:h18
+
+if has('gui_running')
+    set background=dark
+    colorscheme solarized
+    set guifont=SF\ Mono:h14
+endif
 
 " Whitespace
 set autoindent
 set smartindent
 set backspace=indent,eol,start
 
+" Features
 set undofile
 
+" UI
 set number
 set relativenumber
 set modelines=0
@@ -42,17 +65,14 @@ set showcmd
 set foldmethod=manual
 set foldlevel=10
 
-set noshowmode
+set splitbelow
+set splitright
 
+set wrap linebreak
+
+" Searching
 set ignorecase
 set smartcase
 set gdefault
 set incsearch
 set showmatch
-
-set wrap linebreak
-
-set splitbelow
-set splitright
-
-
