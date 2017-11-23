@@ -10,6 +10,7 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 
 Plug 'altercation/vim-colors-solarized'
 
