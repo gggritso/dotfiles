@@ -3,13 +3,20 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
 Plug 'itchyny/lightline.vim'
+Plug 'scrooloose/nerdtree'
+
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
 Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-repeat'
 
 Plug 'altercation/vim-colors-solarized'
 
 Plug 'mileszs/ack.vim'
+
 Plug 'w0rp/ale'
+Plug 'csscomb/vim-csscomb'
 call plug#end()
 
 set nocompatible
@@ -27,6 +34,8 @@ nmap <Leader>t :Files<CR>
 nmap <Leader><Leader> :Buffers<CR>
 
 nmap <Leader>f :Ack<Space>
+
+nmap <Leader>\ :NERDTreeToggle<CR>
 
 " TODO: ALE and ESLint
 
@@ -84,6 +93,7 @@ set smartindent
 set backspace=indent,eol,start
 
 " Features
+set updatetime=250
 set undofile
 set clipboard=unnamed
 set shortmess=I
