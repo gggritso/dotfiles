@@ -80,12 +80,14 @@ let g:lightline = {
 
 " Theme
 syntax enable
-set guifont=SF\ Mono:h16
-
 if has('gui_running')
-    set background=dark
-    colorscheme solarized
-    set guifont=SF\ Mono:h14
+  set background=dark
+  colorscheme solarized
+  set guifont=SF\ Mono:h14
+else
+  set background=light
+  colorscheme solarized
+  set guifont=SF\ Mono:h16
 endif
 
 " Whitespace
