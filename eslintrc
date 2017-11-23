@@ -44,7 +44,8 @@
     "moment": true,
     "bowser": true,
     "__fixtures__": true,
-    "FastClick": true
+    "FastClick": true,
+    "safari": true
   },
   "extends": "eslint:recommended"
 }
