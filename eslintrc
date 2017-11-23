@@ -44,7 +44,12 @@
     "moment": true,
     "bowser": true,
     "__fixtures__": true,
-    "FastClick": true
+    "FastClick": true,
+    "safari": true
   },
-  "extends": "eslint:recommended"
+  "extends": "eslint:recommended",
+	"parserOptions": {
+			"ecmaVersion": 2015,
+			"sourceType": "module"
+	}
 }

@@ -1,6 +1,5 @@
-status --is-interactive; and . (rbenv init -|psub)
+set -x PATH ~/Projects/dotfiles/bin $PATH
 
-set -x PATH ~/.rbenv/shims /usr/local/sbin $PATH
 
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showupstream 'yes'
