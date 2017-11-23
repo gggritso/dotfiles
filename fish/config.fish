@@ -1,4 +1,3 @@
-status --is-interactive; and . (rbenv init -|psub)
 
 set -x PATH ~/.rbenv/shims /usr/local/sbin $PATH
 
