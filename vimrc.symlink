@@ -10,6 +10,7 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 
 Plug 'altercation/vim-colors-solarized'
 
@@ -79,12 +80,14 @@ let g:lightline = {
 
 " Theme
 syntax enable
-set guifont=SF\ Mono:h16
-
 if has('gui_running')
-    set background=dark
-    colorscheme solarized
-    set guifont=SF\ Mono:h14
+  set background=dark
+  colorscheme solarized
+  set guifont=SF\ Mono:h14
+else
+  set background=light
+  colorscheme solarized
+  set guifont=SF\ Mono:h16
 endif
 
 " Whitespace
@@ -120,4 +123,9 @@ set ignorecase
 set smartcase
 set gdefault
 set incsearch
+augroup vimrc-incsearch-highlight
+  autocmd!
+  autocmd CmdlineEnter [/\?] :set hlsearch
+  autocmd CmdlineLeave [/\?] :set nohlsearch
+augroup END
 set showmatch
