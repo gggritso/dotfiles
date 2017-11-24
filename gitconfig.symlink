@@ -59,7 +59,7 @@
 [push]
   default = current
 [core]
-  editor = vim
+  editor = nvim
   precomposeunicode = true
   excludesfile = ~/.gitignore_global
   untrackedCache = true
