@@ -1,5 +1,6 @@
 set -x PATH ~/Projects/dotfiles/bin $PATH
 
+set -x FZF_DEFAULT_COMMAND 'fd --type f'
 
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showupstream 'yes'
