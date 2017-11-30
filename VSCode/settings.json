@@ -38,15 +38,9 @@
     "git.confirmSync": false,
     "gitlens.codeLens.recentChange.enabled": false,
     "gitlens.codeLens.authors.enabled": false,
-    "scss.colorDecorators.enable": false,
-    "css.colorDecorators.enable": false,
+    "editor.colorDecorators": false,
     "editor.minimap.enabled": true,
     "editor.minimap.renderCharacters": false,
-    "workbench.colorCustomizations": {
-        "statusBar.background": "#082B37",
-        "statusBar.noFolderBackground": "#082B37",
-        "statusBar.debuggingBackground": "#082B37"
-    },
     "search.useIgnoreFilesByDefault": true,
     "window.zoomLevel": 0,
     "window.nativeTabs": true,
@@ -64,15 +58,5 @@
             "command": "workbench.action.showCommands",
             "args": []
         }]
-    }],
-    "vim.statusBarColorControl": true,
-    "vim.statusBarColors": {
-        "normal": "#082B37",
-        "insert": "#6c71c4",
-        "visual": "#cb4b16",
-        "visualline": "#cb4b16",
-        "visualblock": "#cb4b16",
-        "replace": "#cb4b16"
-    },
-    "vim.disableAnnoyingNeovimMessage": true
+    }]
 }
