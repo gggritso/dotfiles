@@ -13,7 +13,7 @@
   copy-last-hash = !git last | pbcopy
   summary = status -u -s
   graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %ar) %Cred%d' --date-order
-  history = log -10 --format=format:'%Cgreen%h %Creset• %s (%aN, %ar)'
+  history = log -10 --format=format:'%Cgreen%h %Creset%s (%aN, %ar)'
   new-branch = checkout -b
   rename-branch = branch -m
   delete-branch = branch -D
@@ -59,7 +59,7 @@
 [push]
   default = current
 [core]
-  editor = vim
+  editor = nvim
   precomposeunicode = true
   excludesfile = ~/.gitignore_global
   untrackedCache = true
