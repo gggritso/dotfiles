@@ -16,8 +16,12 @@ Plug 'altercation/vim-colors-solarized'
 
 Plug 'mileszs/ack.vim'
 
+Plug 'machakann/vim-highlightedyank'
+
 Plug 'w0rp/ale'
 Plug 'csscomb/vim-csscomb'
+
+Plug 'pangloss/vim-javascript'
 call plug#end()
 
 set nocompatible
@@ -39,6 +43,7 @@ nmap <Leader>f :Ack<Space>
 nmap <Leader>\ :NERDTreeToggle<CR>
 
 " TODO: ALE and ESLint
+let g:ale_sign_column_always = 1
 
 " TODO: Emacs bindings in command mode
 
@@ -85,7 +90,7 @@ if has('gui_running')
   colorscheme solarized
   set guifont=SF\ Mono:h14
 else
-  set background=light
+  set background=dark
   colorscheme solarized
   set guifont=SF\ Mono:h16
 endif
@@ -99,7 +104,6 @@ set backspace=indent,eol,start
 set updatetime=250
 set undofile
 set clipboard=unnamed
-set shortmess=I
 
 " UI
 set number
@@ -109,23 +113,12 @@ set scrolloff=5
 set hidden
 set ttyfast
 set showcmd
-set foldmethod=manual
-set foldlevel=10
-
-set splitbelow
-set splitright
 
 set wrap linebreak
-
 
 " Searching
 set ignorecase
 set smartcase
-set gdefault
-set incsearch
-augroup vimrc-incsearch-highlight
-  autocmd!
-  autocmd CmdlineEnter [/\?] :set hlsearch
-  autocmd CmdlineLeave [/\?] :set nohlsearch
-augroup END
+set inccommand=nosplit
 set showmatch
+set nohlsearch
