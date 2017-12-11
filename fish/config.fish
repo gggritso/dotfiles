@@ -1,6 +1,7 @@
 set -x PATH ~/Projects/dotfiles/bin $PATH
 set -x EDITOR nvim
 
+set -x FZF_DEFAULT_COMMAND 'fd --type f'
 
 set -x FZF_DEFAULT_COMMAND "fd --type f"
 
