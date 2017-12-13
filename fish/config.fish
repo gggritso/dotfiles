@@ -3,8 +3,6 @@ set -x EDITOR nvim
 
 set -x FZF_DEFAULT_COMMAND 'fd --type f'
 
-set -x FZF_DEFAULT_COMMAND "fd --type f"
-
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showupstream 'yes'
 set __fish_git_prompt_showuntrackedfiles 'yes'
