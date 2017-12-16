@@ -30,7 +30,7 @@ let g:lightline = {
 \ 'colorscheme': 'solarized',
 \ 'active': {
 \   'left': [ [ 'mode', 'paste' ],
-\           [ 'readonly', 'filename', 'modified'  ] ],
+\           [ 'readonly', 'filename', 'modified' ] ],
 \   'right': [ [ 'lineinfo' ], [ 'linter_warnings', 'linter_errors', 'linter_ok' ] ],
 \ }
 \ }
