@@ -1,26 +1,16 @@
 call plug#begin('~/.vim/plugged')
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
-
 Plug 'itchyny/lightline.vim'
-Plug 'scrooloose/nerdtree'
 
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
 
-Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
 Plug 'altercation/vim-colors-solarized'
 
 Plug 'pangloss/vim-javascript'
 Plug 'machakann/vim-highlightedyank'
-
-Plug 'mileszs/ack.vim'
-
-Plug 'w0rp/ale'
-Plug 'csscomb/vim-csscomb'
 call plug#end()
 
 set nocompatible
@@ -32,69 +22,20 @@ let mapleader = "\<space>"
 nmap j gj
 nmap k gk
 
-inoremap { {<CR>}<Esc>O
-
-nmap <Leader>t :Files<CR>
-nmap <Leader><Leader> :Buffers<CR>
-
-nmap <Leader>f :Ack<Space>
-
-nmap <Leader>\ :NERDTreeToggle<CR>
-
-" Window movement
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-" Ack
-let g:ackprg = 'ag --vimgrep'
-
-" ALE
-let g:ale_linters = {
-\ 'javascript': ['eslint'],
-\ }
-let g:ale_fixers = {
-\ 'javascript': ['eslint'],
-\ }
-let g:ale_sign_error = '!'
-let g:ale_sign_warning = '¡'
-
-" fzf
-let g:fzf_layout = { 'up': '~20%' }
+" Move visual selection
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " Lightline
 function! ShortGitBranchName()
   return strpart(fugitive#head(), 0, 30)
 endfunction
 
-function! LightlineLinterWarnings() abort
-  let l:counts = ale#statusline#Count(bufnr(''))
-  let l:all_errors = l:counts.error + l:counts.style_error
-  let l:all_non_errors = l:counts.total - l:all_errors
-  return l:counts.total == 0 ? '' : printf('%d ◆', all_non_errors)
-endfunction
-
-function! LightlineLinterErrors() abort
-  let l:counts = ale#statusline#Count(bufnr(''))
-  let l:all_errors = l:counts.error + l:counts.style_error
-  let l:all_non_errors = l:counts.total - l:all_errors
-  return l:counts.total == 0 ? '' : printf('%d ✗', all_errors)
-endfunction
-
-function! LightlineLinterOK() abort
-  let l:counts = ale#statusline#Count(bufnr(''))
-  let l:all_errors = l:counts.error + l:counts.style_error
-  let l:all_non_errors = l:counts.total - l:all_errors
-  return l:counts.total == 0 ? '✓' : ''
-endfunction
-
-autocmd User ALELint call lightline#update()
-
 set noshowmode
 set laststatus=2
 set cmdheight=1
 let g:lightline = {
+\ 'colorscheme': 'solarized',
 \ 'active': {
 \   'left': [ [ 'mode', 'paste' ],
 \           [ 'readonly', 'filename', 'modified', 'gitbranch' ] ],
@@ -141,6 +82,11 @@ set ttyfast
 set showcmd
 set foldmethod=manual
 set foldlevel=10
+set mouse=a
+
+set noswapfile
+set nobackup
+set nowb
 
 set splitbelow
 set splitright
