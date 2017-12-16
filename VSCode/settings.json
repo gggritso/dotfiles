@@ -1,6 +1,6 @@
 {
     "editor.fontFamily": "SF Mono",
-    "editor.fontSize": 14,
+    "editor.fontSize": 16,
     "editor.lineHeight": 20,
     "editor.lineNumbers": "relative",
     "editor.rulers": [
@@ -36,6 +36,8 @@
     "workbench.activityBar.visible": false,
     "workbench.statusBar.visible": true,
     "git.confirmSync": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
     "editor.colorDecorators": false,
     "editor.minimap.enabled": true,
     "editor.minimap.renderCharacters": false,
@@ -56,8 +58,8 @@
             "command": "workbench.action.showCommands",
             "args": []
         }]
-    }
-],
-"explorer.confirmDragAndDrop": false,
-"workbench.startupEditor": "newUntitledFile"
+    }],
+    "explorer.confirmDragAndDrop": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "vim.disableAnnoyingNeovimMessage": true
 }

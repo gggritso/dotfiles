@@ -1,15 +1,12 @@
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 
-Plug 'tpope/vim-fugitive'
-
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
 Plug 'altercation/vim-colors-solarized'
 
-Plug 'pangloss/vim-javascript'
 Plug 'machakann/vim-highlightedyank'
 call plug#end()
 
@@ -26,11 +23,6 @@ nmap k gk
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-" Lightline
-function! ShortGitBranchName()
-  return strpart(fugitive#head(), 0, 30)
-endfunction
-
 set noshowmode
 set laststatus=2
 set cmdheight=1
@@ -38,17 +30,9 @@ let g:lightline = {
 \ 'colorscheme': 'solarized',
 \ 'active': {
 \   'left': [ [ 'mode', 'paste' ],
-\           [ 'readonly', 'filename', 'modified', 'gitbranch' ] ],
+\           [ 'readonly', 'filename', 'modified'  ] ],
 \   'right': [ [ 'lineinfo' ], [ 'linter_warnings', 'linter_errors', 'linter_ok' ] ],
-\ },
-\ 'component_function': {
-\   'gitbranch': 'ShortGitBranchName',
-\ },
-\ 'component_expand': {
-\   'linter_warnings': 'LightlineLinterWarnings',
-\   'linter_errors': 'LightlineLinterErrors',
-\   'linter_ok': 'LightlineLinterOK'
-\ },
+\ }
 \ }
 
 syntax enable
@@ -56,11 +40,7 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-if has('gui_running')
-  set guifont=SF\ Mono:h14
-else
-  set guifont=SF\ Mono:h16
-endif
+set guifont=SF\ Mono:h16
 
 " Whitespace
 set autoindent
@@ -70,7 +50,6 @@ set backspace=indent,eol,start
 set updatetime=250
 set undofile
 set clipboard=unnamed
-set shortmess=I
 
 " UI
 set number
@@ -84,6 +63,7 @@ set foldmethod=manual
 set foldlevel=10
 set mouse=a
 
+" Features
 set noswapfile
 set nobackup
 set nowb
