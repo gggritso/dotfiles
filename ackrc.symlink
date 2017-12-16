@@ -3,7 +3,7 @@
 --smart-case
 --type-set=sass=.scss,.sass
 --type-set=php=.php,.inc,.module
---type-set=html=.html,.erb,.haml,.jade,.hbs,.tpl.php
+--type-set=html=.html,.erb,.haml,.jade,.hbs,.tpl.php,.tmpl
 --type-set=css=.css,.scss,.sass,.less
 --type-set=ruby=.rb
 --ignore-dir=.git
@@ -14,6 +14,7 @@
 --ignore-dir=tmp
 --ignore-dir=public
 --ignore-dir=bower_components
+--ignore-dir=cache
 --ignore-file=ext:orig
 --ignore-file=ext:log
 --ignore-file=match:\.?tags\d?

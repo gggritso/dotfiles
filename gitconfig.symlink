@@ -10,38 +10,60 @@
   resave = commit --amend
   invert = revert
   last = log -1 HEAD --format=format:"%Cred%H"
+  copy-last-hash = !git last | pbcopy
   summary = status -u -s
   graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %ar) %Cred%d' --date-order
-  history = log -10 --format=format:'%Cgreen%h %Creset• %s (%cN, %ar)'
+  history = log -10 --format=format:'%Cgreen%h %Creset%s (%aN, %ar)'
+  new-branch = checkout -b
+  rename-branch = branch -m
+  delete-branch = branch -D
+  track = branch --set-upstream-to
+  branches = branch -a
+  recent-branches = branch -a --sort=committerdate
   branchout = checkout -b
   tags = tag
   branches = branch -a
   stashes = stash list
+  prestage = diff
+  precommit = diff --cached
   remotes = remote -v
-  prestage = diff -w --word-diff=color
-  precommit = diff --cached -w --word-diff=color --word-diff-regex='[^[:space:]<>]+'
   move = mv
   remove = rm
   unmerged = branch --no-merged
   unstash = stash pop
-  what = show -w
+  what = show
   untrack = rm -r --cached
   rewrite = rebase -i
-  amend = commit --amend
+  amend = commit --amend --no-edit
+  amend-message = commit --amend
   back = checkout "-"
   contributors = shortlog -s -n --no-merges
-  filetrail = log --follow -p -w
-  mergetrail = log --ancestry-path --merges
+  file-trail = log --follow -p -w
+  merge-trail = log --ancestry-path --merges
   unmerged = diff --name-only --diff-filter=U
-  aliases = !git config --get-regexp alias | sed 's/alias.//' | sed 's/ /: /'
+  patch = add --patch
+  tuck = stash save
+  untuck = stash pop "stash@{0}"
+  aliases = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\:\\ /
+[diff]
+  compactionHeuristic = true
+  indentHeuristic = true
+  algorithm = patience
+[interactive]
+  diffFilter = diff-highlight
+[pager]
+  diff = diff-highlight | less
+  log = diff-highlight | less
+  show = diff-highlight | less
 [blame]
   date = relative
 [push]
   default = current
 [core]
-  editor = vim
+  editor = nvim
   precomposeunicode = true
   excludesfile = ~/.gitignore_global
+  untrackedCache = true
 [credential]
   helper = osxkeychain
 [merge]

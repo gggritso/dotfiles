@@ -1,119 +1,124 @@
+call plug#begin('~/.vim/plugged')
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
-" Fish hates NeoBundle, apparently, since it's not POSIX compliant
-if $SHELL =~ 'bin/fish'
-  set shell=/bin/sh
-endif
+Plug 'itchyny/lightline.vim'
+Plug 'scrooloose/nerdtree'
+
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+
+Plug 'altercation/vim-colors-solarized'
+
+Plug 'mileszs/ack.vim'
+
+Plug 'machakann/vim-highlightedyank'
+
+Plug 'w0rp/ale'
+Plug 'csscomb/vim-csscomb'
+
+Plug 'pangloss/vim-javascript'
+call plug#end()
 
 set nocompatible
-set runtimepath+=~/.vim/bundle/neobundle.vim/
-
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'myusuf3/numbers.vim'
-
-NeoBundle 'tommcdo/vim-exchange'
-NeoBundle 'nelstrom/vim-visual-star-search'
-NeoBundle 'tpope/vim-unimpaired'
-
-NeoBundle 'sjl/gundo.vim'
-
-NeoBundle 'kien/rainbow_parentheses.vim'
-
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-repeat'
-NeoBundle 'tpope/vim-speeddating'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'Raimondi/delimitMate'
-
-NeoBundle 'marcweber/vim-addon-mw-utils'
-NeoBundle 'tomtom/tlib_vim'
-NeoBundle 'garbas/vim-snipmate'
-NeoBundle 'honza/vim-snippets'
-
-NeoBundle 'plasticboy/vim-markdown'
-
-NeoBundle 'altercation/vim-colors-solarized'
-
-call neobundle#end()
-
-filetype plugin indent on
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set noexpandtab
-
-NeoBundleCheck
-
-let g:ctrlp_show_hidden = 1
-
 set encoding=utf-8
 
-syntax enable
-set background=light
-colorscheme solarized
-set guifont=Fantasque\ Sans\ Mono:h18
+" Bindings
+let mapleader = "\<space>"
 
+nmap j gj
+nmap k gk
+
+inoremap { {<CR>}<Esc>O
+
+nmap <Leader>t :Files<CR>
+nmap <Leader><Leader> :Buffers<CR>
+
+nmap <Leader>f :Ack<Space>
+
+nmap <Leader>\ :NERDTreeToggle<CR>
+
+" TODO: ALE and ESLint
+let g:ale_sign_column_always = 1
+
+" TODO: Emacs bindings in command mode
+
+" Ack
+let g:ackprg = 'ag --vimgrep'
+
+" ALE
+let g:ale_linters = {
+\ 'javascript': ['eslint'],
+\ }
+let g:ale_fixers = {
+\ 'javascript': ['eslint'],
+\ }
+let g:ale_sign_error = '!'
+let g:ale_sign_warning = '¡'
+
+" fzf
+let g:fzf_layout = { 'up': '~20%' }
+
+
+" Lightline
+function! ShortGitBranchName()
+  return strpart(fugitive#head(), 0, 30)
+endfunction
+
+set noshowmode
+set laststatus=2
+set cmdheight=1
+let g:lightline = {
+\ 'active': {
+\   'left': [ [ 'mode', 'paste' ],
+\           [ 'readonly', 'filename', 'modified', 'gitbranch' ] ],
+\   'right': [ [ 'lineinfo' ] ],
+\ },
+\ 'component_function': {
+\   'gitbranch': 'ShortGitBranchName',
+\ },
+\ }
+
+" Theme
+syntax enable
+if has('gui_running')
+  set background=dark
+  colorscheme solarized
+  set guifont=SF\ Mono:h14
+else
+  set background=dark
+  colorscheme solarized
+  set guifont=SF\ Mono:h16
+endif
+
+" Whitespace
 set autoindent
 set smartindent
 set backspace=indent,eol,start
 
+" Features
+set updatetime=250
 set undofile
+set clipboard=unnamed
 
+" UI
 set number
 set relativenumber
 set modelines=0
 set scrolloff=5
 set hidden
-set visualbell
 set ttyfast
-set laststatus=2
 set showcmd
-set foldmethod=manual
-set foldlevel=10
-
-set noshowmode
-
-set ignorecase
-set smartcase
-set gdefault
-set incsearch
-set showmatch
 
 set wrap linebreak
 
-set splitbelow
-set splitright
-
-set wildmenu
-set wildmode=list:longest
-set wildignore+=*.py?
-set wildignore+=*.sw?
-set wildignore+=*.png,&.jpeg
-set wildignore+=*.orig
-set wildignore+=venv
-set wildignore+=node_modules
-
-" Auto Commands
-au FocusLost * wa
-
-" Keybindings
-let mapleader = ","
-nnoremap <tab> %
-vnoremap <tab> %
-
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-nnoremap <leader>p :CtrlP<cr>
-nnoremap <leader>g :GundoToggle<cr>
-nnoremap <leader>a :Ack
-
-nnoremap <C-tab> :bn<cr>
-nnoremap <C-S-tab> :bp<cr>
-
-imap <C-J> <Plug>snipMateNextOrTrigger
+" Searching
+set ignorecase
+set smartcase
+set inccommand=nosplit
+set showmatch
+set nohlsearch
