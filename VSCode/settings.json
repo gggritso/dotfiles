@@ -15,33 +15,32 @@
     "editor.renderWhitespace": "none",
     "editor.renderIndentGuides": false,
     "editor.trimAutoWhitespace": false,
-    "files.insertFinalNewline": true,
     "editor.cursorStyle": "block",
     "editor.cursorBlinking": "blink",
     "editor.renderLineHighlight": "none",
     "editor.hideCursorInOverviewRuler": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.autoIndent": true,
+    "editor.colorDecorators": false,
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "files.autoSave": "onWindowChange",
-    "terminal.external.osxExec": "iTerm.app",
-    "workbench.colorTheme": "Solarized Dark",
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.sideBar.location": "right",
     "files.associations": {
         "*.module": "php",
         "*.inc": "php",
         "*.tmpl": "html"
     },
+    "terminal.external.osxExec": "iTerm.app",
+    "workbench.colorTheme": "Solarized Dark",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.sideBar.location": "right",
     "workbench.activityBar.visible": false,
     "workbench.statusBar.visible": true,
+    "workbench.startupEditor": "none",
     "git.confirmSync": false,
-    "gitlens.codeLens.recentChange.enabled": false,
-    "gitlens.codeLens.authors.enabled": false,
-    "editor.colorDecorators": false,
-    "editor.minimap.enabled": true,
-    "editor.minimap.renderCharacters": false,
-    "search.useIgnoreFilesByDefault": true,
     "window.zoomLevel": 0,
     "window.nativeTabs": true,
     "vim.handleKeys": {
@@ -58,8 +57,5 @@
             "command": "workbench.action.showCommands",
             "args": []
         }]
-    }],
-    "explorer.confirmDragAndDrop": false,
-    "workbench.startupEditor": "newUntitledFile",
-    "vim.disableAnnoyingNeovimMessage": true
+    }]
 }
