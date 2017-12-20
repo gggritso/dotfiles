@@ -24,6 +24,8 @@
     "editor.colorDecorators": false,
     "editor.minimap.enabled": true,
     "editor.minimap.renderCharacters": false,
+    "editor.find.autoFindInSelection": true,
+    "editor.folding": false,
     "explorer.confirmDragAndDrop": false,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
@@ -40,14 +42,15 @@
     "workbench.activityBar.visible": false,
     "workbench.statusBar.visible": true,
     "workbench.startupEditor": "none",
+    "workbench.editor.tabCloseButton": "left",
     "git.confirmSync": false,
+    "git.checkoutType": "local",
     "window.zoomLevel": 0,
     "window.nativeTabs": true,
     "vim.handleKeys": {
         "<D-d>": false
     },
     "vim.insertModeKeyBindings": [{
-        "before": ["j", "j"],
         "after": ["<Esc>"]
     }],
     "vim.otherModesKeyBindingsNonRecursive": [{
@@ -57,5 +60,7 @@
             "command": "workbench.action.showCommands",
             "args": []
         }]
-    }]
+    }],
+    "vim.useSystemClipboard": true,
+    "csscomb.formatOnSave": true
 }

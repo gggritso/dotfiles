@@ -45,6 +45,8 @@
   tuck = stash save
   untuck = stash pop "stash@{0}"
   aliases = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\:\\ /
+[advice]
+  statusHints = false
 [diff]
   compactionHeuristic = true
   indentHeuristic = true
