@@ -38,7 +38,7 @@
     "terminal.external.osxExec": "iTerm.app",
     "workbench.colorTheme": "Solarized Dark",
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.sideBar.location": "right",
+    "workbench.sideBar.location": "left",
     "workbench.activityBar.visible": false,
     "workbench.statusBar.visible": true,
     "workbench.startupEditor": "none",
@@ -47,22 +47,7 @@
     "git.checkoutType": "local",
     "window.zoomLevel": 0,
     "window.nativeTabs": true,
-    "vim.handleKeys": {
-        "<D-d>": false
-    },
-    "vim.insertModeKeyBindings": [{
-        "after": ["<Esc>"]
-    }],
-    "vim.otherModesKeyBindingsNonRecursive": [{
-        "before": [":"],
-        "after": [],
-        "commands": [{
-            "command": "workbench.action.showCommands",
-            "args": []
-        }]
-    }],
-    "vim.useSystemClipboard": true,
-    "csscomb.formatOnSave": true,
+    "editor.formatOnSave": true,
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
         "suppressCommitNotFoundWarning": false,
@@ -73,5 +58,8 @@
         "suppressUpdateNotice": true,
         "suppressWelcomeNotice": false
     },
-    "editor.minimap.showSlider": "always"
+    "editor.minimap.showSlider": "always",
+    "search.smartCase": true,
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.currentLine.enabled": false
 }
