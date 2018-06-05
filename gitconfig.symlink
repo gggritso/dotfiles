@@ -17,7 +17,6 @@
   new-branch = checkout -b
   rename-branch = branch -m
   delete-branch = branch -D
-  track = branch --set-upstream-to
   branches = branch
   recent-branches = branch -a --sort=committerdate
   branchout = checkout -b
@@ -45,6 +44,7 @@
   untuck = stash pop "stash@{0}"
   boop = "!f() { B=$(git rev-parse --abbrev-ref HEAD); git commit --allow-empty -m 'Boop!'; git push origin $B; }; f"
   aliases = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\:\\ /
+  track = "!f() { B=$(git rev-parse --abbrev-ref HEAD); git branch --set-upstream-to=origin/$B; }; f"
 [advice]
   statusHints = false
 [diff]
