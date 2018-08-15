@@ -194,5 +194,6 @@
             "level": "ignore"
         }
     },
-    "docker.showExplorer": false
+    "docker.showExplorer": false,
+    "breadcrumbs.enabled": true
 }
