@@ -8,5 +8,5 @@ function fish_prompt
   __fish_git_prompt
 
   set_color red
-  echo -n " "α" "
+  echo -n " $MACHINE_LATIN_ID "
 end
