@@ -79,3 +79,5 @@
   conflictstyle = diff3
 [mailmap]
   file = ~/.mailmap
+[merge "ours"]
+	driver = true
