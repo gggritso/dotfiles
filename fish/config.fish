@@ -10,3 +10,6 @@ set __fish_git_prompt_char_upstream_prefix ''
 set __fish_git_prompt_char_upstream_ahead ' ↑'
 set __fish_git_prompt_char_upstream_behind ' ↓'
 set __fish_git_prompt_char_upstream_equal ''
+
+set -gx NODE_ENV "development"
+set -gx NVM_DIR $HOME/.nvm
