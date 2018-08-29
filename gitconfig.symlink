@@ -20,7 +20,6 @@
   delete-branch = branch -D
   branches = branch
   recent-branches = branch -a --sort=committerdate
-  branchout = checkout -b
   tags = tag
   stashes = stash list
   prestage = diff
