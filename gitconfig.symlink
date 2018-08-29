@@ -41,10 +41,16 @@
   unmerged = diff --name-only --diff-filter=U
   patch = add --patch
   tuck = stash save
+  current-branch = rev-parse --abbrev-ref HEAD
   untuck = stash pop "stash@{0}"
-  boop = "!f() { B=$(git rev-parse --abbrev-ref HEAD); git commit --allow-empty -m 'Boop!'; git push origin $B; }; f"
+  boop = "!f() { B=$(git current-branch); git commit --allow-empty -m 'Boop!'; git push origin $B; }; f"
   aliases = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\:\\ /
-  track = "!f() { B=$(git rev-parse --abbrev-ref HEAD); git branch --set-upstream-to=origin/$B; }; f"
+  autotrack = "!f() { B=$(git current-branch); git branch --set-upstream-to=origin/$B; }; f"
+  into = "!f() { B=$(git current-branch); git checkout $1; git pull; git merge $B --no-edit; }; f"
+  into-staging = "!f() { B=$(git current-branch); git checkout staging; git pull; git merge $B --no-edit; }; f"
+  into-master = "!f() { B=$(git current-branch); git checkout master; git pull; git merge $B --no-edit; }; f"
+  work-log = !git log --reverse master...HEAD --format=format:'* %B' | pbcopy
+  submit = !git push && git autotrack
 [advice]
   statusHints = false
 [diff]
