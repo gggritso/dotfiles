@@ -8,6 +8,7 @@
   uncommit = reset --mixed HEAD~
   save = commit -m
   resave = commit --amend
+  fold = commit --amend --no-edit
   invert = revert
   last = log -1 HEAD --format=format:"%Cred%H"
   copy-last-hash = !git last | pbcopy
