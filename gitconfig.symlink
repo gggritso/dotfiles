@@ -72,7 +72,7 @@
   precomposeunicode = true
   excludesfile = ~/.gitignore_global
   untrackedCache = true
-  commentcar = ";"
+  commentchar = ";"
 [credential]
   helper = osxkeychain
 [merge]
