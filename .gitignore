@@ -3,3 +3,15 @@
 
 fish_history
 fishd.*
+
+fish/completions
+
+fish/functions/*
+!fish/functions/die.fish
+!fish/functions/fish_*.fish
+!fish/functions/l.fish
+!fish/functions/la.fish
+!fish/functions/rimraf.fish
+!fish/functions/z.fish
+
+bin/ngrok
