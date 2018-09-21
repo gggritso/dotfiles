@@ -51,6 +51,8 @@
   into-master = "!f() { B=$(git current-branch); git checkout master; git pull; git merge $B --no-edit; }; f"
   work-log = !git log --reverse master...HEAD --format=format:'* %B' | pbcopy
   submit = !git push && git autotrack
+  whodunit = blame -wMC
+  axe = log --reverse -p -w -S
 [advice]
   statusHints = false
 [diff]
