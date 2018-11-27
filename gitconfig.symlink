@@ -38,7 +38,7 @@
   contributors = shortlog -s -n --no-merges
   file-trail = log --follow -p -w
   merge-trail = log --ancestry-path --merges
-  unmerged = diff --name-only --diff-filter=U
+  unmerged-files = diff --name-only
   patch = add --patch
   tuck = stash save
   untuck = stash pop "stash@{0}"
