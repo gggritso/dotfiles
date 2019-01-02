@@ -35,7 +35,7 @@
     "*.jst.ejs": "ejs"
   },
   "terminal.external.osxExec": "iTerm.app",
-  "workbench.colorTheme": "Solarized Light",
+  "workbench.colorTheme": "Solarized Dark",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.sideBar.location": "left",
   "workbench.activityBar.visible": false,

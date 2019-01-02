@@ -41,7 +41,7 @@ let g:lightline = {
 
 syntax enable
 
-set background=light
+set background=dark
 colorscheme solarized
 
 set guifont=SF\ Mono:h16
