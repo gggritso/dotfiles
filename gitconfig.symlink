@@ -82,4 +82,6 @@
 [mailmap]
   file = ~/.mailmap
 [merge "ours"]
-	driver = true
+  driver = true
+[commit]
+  verbose = true
