@@ -8,6 +8,10 @@ Plug 'tpope/vim-commentary'
 Plug 'altercation/vim-colors-solarized'
 
 Plug 'machakann/vim-highlightedyank'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'w0rp/ale'
+Plug 'junegunn/fzf.vim'
+Plug 'mxw/vim-jsx'
 call plug#end()
 
 set nocompatible
