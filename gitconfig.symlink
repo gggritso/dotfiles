@@ -22,8 +22,8 @@
   recent-branches = branch -a --sort=committerdate
   tags = tag
   stashes = stash list
-  prestage = diff
-  precommit = diff --cached
+  prestage = diff -w
+  precommit = diff -w --cached
   remotes = remote -v
   move = mv
   remove = rm
