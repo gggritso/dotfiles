@@ -60,7 +60,6 @@ set ttyfast
 set showcmd
 set foldmethod=manual
 set foldlevel=10
-set mouse=a
 
 " Features
 set noswapfile
