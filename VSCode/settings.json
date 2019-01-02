@@ -22,7 +22,6 @@
   "editor.colorDecorators": false,
   "editor.minimap.enabled": true,
   "editor.minimap.renderCharacters": false,
-  "editor.find.autoFindInSelection": true,
   "editor.folding": true,
   "explorer.confirmDragAndDrop": false,
   "files.insertFinalNewline": true,
@@ -79,12 +78,19 @@
     "editor.tabSize": 2,
     "editor.insertSpaces": true
   },
+  "[yaml]": {
+    "editor.formatOnSave": false
+  },
   "[log]": {
     "editor.rulers": [],
     "editor.wordWrap": "off"
   },
-  "[ejs]": {
-    "stylelint.enable": false
+  "[plaintext]": {
+    "editor.rulers": [],
+    "editor.wordWrap": "off"
+  },
+  "stylelint.configOverrides": {
+    "ignoreFiles": "*.js"
   },
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.lineHeight": 1,
@@ -216,5 +222,14 @@
   "workbench.editor.closeEmptyGroups": false,
   "breadcrumbs.enabled": true,
   "breadcrumbs.symbolPath": "off",
-  "extensions.ignoreRecommendations": true
+  "extensions.ignoreRecommendations": true,
+  "search.location": "panel",
+  "workbench.fontAliasing": "auto",
+  "zenMode.fullScreen": false,
+  "zenMode.hideStatusBar": false,
+  "zenMode.hideTabs": false,
+  "workbench.editor.centeredLayoutAutoResize": false,
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "workbench.statusBar.feedback.visible": false
 }
