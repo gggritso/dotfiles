@@ -40,7 +40,7 @@
   merge-trail = log --ancestry-path --merges
   unmerged-files = diff --name-only
   patch = add --patch
-  tuck = stash save
+  tuck = stash save -u
   current-branch = rev-parse --abbrev-ref HEAD
   untuck = stash pop "stash@{0}"
   boop = "!f() { B=$(git current-branch); git commit --allow-empty -m 'Boop!'; git push origin $B; }; f"
@@ -49,16 +49,19 @@
   into = "!f() { B=$(git current-branch); git checkout $1; git pull; git merge $B --no-edit; }; f"
   into-staging = "!f() { B=$(git current-branch); git checkout staging; git pull; git merge $B --no-edit; }; f"
   into-master = "!f() { B=$(git current-branch); git checkout master; git pull; git merge $B --no-edit; }; f"
-  work-log = !git log --reverse master...HEAD --format=format:'* %B' | pbcopy
+  work-log = !git log --reverse master...HEAD --format=format:'* %w(0,0,4)%B' | pbcopy
   submit = !git push && git autotrack
   whodunit = blame -wMC
   axe = log --reverse -p -w -S
 [advice]
   statusHints = false
 [diff]
+  tool = vscode
   compactionHeuristic = true
   indentHeuristic = true
   algorithm = patience
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
 [interactive]
   diffFilter = diff-highlight
 [pager]
@@ -78,7 +81,10 @@
 [credential]
   helper = osxkeychain
 [merge]
+  tool = vscode
   conflictstyle = diff3
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
 [mailmap]
   file = ~/.mailmap
 [merge "ours"]
