@@ -49,7 +49,7 @@
   into = "!f() { B=$(git current-branch); git checkout $1; git pull; git merge $B --no-edit; }; f"
   into-staging = "!f() { B=$(git current-branch); git checkout staging; git pull; git merge $B --no-edit; }; f"
   into-master = "!f() { B=$(git current-branch); git checkout master; git pull; git merge $B --no-edit; }; f"
-  work-log = !git log --reverse master...HEAD --format=format:'* %w(0,0,4)%B' | pbcopy
+  work-log = !git log --reverse master...HEAD --format=format:'- %w(0,0,4)%B'
   submit = !git push && git autotrack
   whodunit = blame -wMC
   axe = log --reverse -p -w -S
