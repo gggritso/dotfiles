@@ -7,7 +7,7 @@
   nevermind = !git reset --hard HEAD && git clean -d -f
   uncommit = reset --mixed HEAD~
   save = commit -m
-  resave = commit --amend
+  resave = commit --amend -m
   fold = commit --amend --no-edit
   invert = revert
   last = log -1 HEAD --format=format:"%Cred%H"
