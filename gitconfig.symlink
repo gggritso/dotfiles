@@ -32,8 +32,6 @@
   what = show
   untrack = rm -r --cached
   rewrite = rebase -i
-  amend = commit --amend --no-edit
-  amend-message = commit --amend
   back = checkout "-"
   contributors = shortlog -s -n --no-merges
   file-trail = log --follow -p -w
