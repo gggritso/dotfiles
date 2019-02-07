@@ -231,5 +231,6 @@
   "workbench.editor.centeredLayoutAutoResize": false,
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
-  "workbench.statusBar.feedback.visible": false
+  "workbench.statusBar.feedback.visible": false,
+  "workbench.list.keyboardNavigation": "filter"
 }
