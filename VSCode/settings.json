@@ -61,7 +61,6 @@
   "editor.minimap.showSlider": "always",
   "search.smartCase": true,
   "gitlens.codeLens.authors.enabled": false,
-  "gitlens.currentLine.enabled": false,
   "editor.showFoldingControls": "mouseover",
   "prettier.eslintIntegration": true,
   "prettier.stylelintIntegration": true,
@@ -90,7 +89,7 @@
     "editor.wordWrap": "off"
   },
   "stylelint.configOverrides": {
-    "ignoreFiles": "*.js"
+    "ignoreFiles": "**/*.js"
   },
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.lineHeight": 1,
@@ -212,7 +211,6 @@
   },
   "docker.showExplorer": false,
   "gitlens.historyExplorer.enabled": true,
-  "gitlens.codeLens.enabled": false,
   "ruby.lint": {
     "rubocop": true
   },
@@ -231,5 +229,13 @@
   "workbench.editor.centeredLayoutAutoResize": false,
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
-  "workbench.statusBar.feedback.visible": false
+  "workbench.statusBar.feedback.visible": false,
+  "gitlens.blame.heatmap.enabled": false,
+  "gitlens.blame.highlight.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.views.repositories.enabled": false,
+  "gitlens.mode.statusBar.enabled": false,
+  "workbench.panel.defaultLocation": "right",
+  "gitlens.views.compare.files.layout": "list"
 }
