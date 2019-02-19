@@ -6,6 +6,8 @@ fishd.*
 
 fish/completions
 
+fish/local.fish
+
 fish/functions/*
 !fish/functions/die.fish
 !fish/functions/fish_*.fish
