@@ -3,14 +3,16 @@
   "editor.fontSize": 14,
   "editor.lineHeight": 20,
   "editor.lineNumbers": "relative",
-  "editor.rulers": [120],
+  "editor.rulers": [
+    120
+  ],
   "editor.wordWrapColumn": 120,
   "editor.wordWrap": "bounded",
   "editor.wrappingIndent": "indent",
   "editor.tabSize": 2,
   "editor.snippetSuggestions": "top",
   "editor.insertSpaces": true,
-  "editor.renderWhitespace": "boundary",
+  "editor.renderWhitespace": "selection",
   "editor.renderIndentGuides": false,
   "editor.trimAutoWhitespace": false,
   "editor.cursorStyle": "block",
@@ -38,6 +40,7 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.sideBar.location": "left",
   "workbench.activityBar.visible": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.statusBar.visible": true,
   "workbench.startupEditor": "none",
   "workbench.editor.tabCloseButton": "left",
@@ -62,7 +65,7 @@
   "search.smartCase": true,
   "gitlens.codeLens.authors.enabled": false,
   "editor.showFoldingControls": "mouseover",
-  "prettier.eslintIntegration": true,
+  "prettier.eslintIntegration": false,
   "prettier.stylelintIntegration": true,
   "[scss]": {
     "editor.formatOnSave": false
