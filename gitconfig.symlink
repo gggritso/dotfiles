@@ -1,6 +1,6 @@
 [user]
   name = George Gritsouk
-  email = george.gritsouk@gmail.com
+  email = 989898+gggritso@users.noreply.github.com
 [alias]
   unstage = reset -q HEAD --
   discard = checkout --
