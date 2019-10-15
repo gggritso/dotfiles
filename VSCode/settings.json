@@ -22,7 +22,7 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.autoIndent": true,
   "editor.colorDecorators": false,
-  "editor.minimap.enabled": true,
+  "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
   "editor.folding": true,
   "explorer.confirmDragAndDrop": false,
