@@ -22,7 +22,7 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.autoIndent": true,
   "editor.colorDecorators": false,
-  "editor.minimap.enabled": true,
+  "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
   "editor.folding": true,
   "explorer.confirmDragAndDrop": false,
@@ -33,7 +33,8 @@
     "*.module": "php",
     "*.inc": "php",
     "*.tmpl": "html",
-    "*.jst.ejs": "ejs"
+    "*.jst.ejs": "ejs",
+    "*.scss.liquid": "scss"
   },
   "terminal.external.osxExec": "iTerm.app",
   "workbench.colorTheme": "Solarized Light",
@@ -242,5 +243,6 @@
   "gitlens.views.repositories.enabled": false,
   "gitlens.mode.statusBar.enabled": false,
   "gitlens.views.compare.files.layout": "list",
-  "workbench.tree.renderIndentGuides": "none"
+  "workbench.tree.renderIndentGuides": "none",
+  "editor.dragAndDrop": false
 }

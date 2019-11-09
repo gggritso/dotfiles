@@ -18,7 +18,7 @@
   new-branch = checkout -b
   rename-branch = branch -m
   delete-branch = branch -D
-  branches = "!git branch | ag -v '(staging|master|production)'"
+  branches = "!git branch | ag -v '(staging|master)'"
   recent-branches = branch -a --sort=committerdate
   tags = tag
   stashes = stash list
@@ -30,6 +30,7 @@
   unmerged = branch --no-merged
   unstash = stash pop
   what = show
+  show-last = show HEAD
   untrack = rm -r --cached
   rewrite = rebase -i
   back = checkout "-"
@@ -47,6 +48,7 @@
   into = "!f() { B=$(git current-branch); git checkout $1; git pull; git merge $B --no-edit; }; f"
   into-staging = "!f() { B=$(git current-branch); git checkout staging; git pull; git merge $B --no-edit; }; f"
   into-master = "!f() { B=$(git current-branch); git checkout master; git pull; git merge $B --no-edit; }; f"
+  onto = "!f() { B=$(git current-branch); git checkout master; git pull; git checkout $B; git rebase -i $1; }; f"
   work-log = !git log --reverse master...HEAD --format=format:'- %w(0,0,4)%B'
   submit = !git push && git autotrack
   whodunit = blame -wMC
