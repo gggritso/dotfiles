@@ -36,7 +36,7 @@
     "*.jst.ejs": "ejs"
   },
   "terminal.external.osxExec": "iTerm.app",
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Solarized Light",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.sideBar.location": "left",
   "workbench.activityBar.visible": false,
@@ -234,12 +234,13 @@
   "workbench.editor.showTabs": true,
   "workbench.editor.closeEmptyGroups": false,
   "workbench.panel.defaultLocation": "right",
-  "workbench.list.keyboardNavigation": "filter"
+  "workbench.list.keyboardNavigation": "filter",
   "gitlens.blame.heatmap.enabled": false,
   "gitlens.blame.highlight.enabled": false,
   "gitlens.codeLens.enabled": false,
   "gitlens.statusBar.enabled": false,
   "gitlens.views.repositories.enabled": false,
   "gitlens.mode.statusBar.enabled": false,
-  "gitlens.views.compare.files.layout": "list"
+  "gitlens.views.compare.files.layout": "list",
+  "workbench.tree.renderIndentGuides": "none"
 }
