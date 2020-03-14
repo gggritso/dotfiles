@@ -2,6 +2,8 @@
   name = George Gritsouk
   email = 989898+gggritso@users.noreply.github.com
 [alias]
+  comit = commit
+  commmit = commit
   unstage = reset -q HEAD --
   discard = checkout --
   nevermind = !git reset --hard HEAD && git clean -d -f
@@ -18,7 +20,7 @@
   new-branch = checkout -b
   rename-branch = branch -m
   delete-branch = branch -D
-  branches = "!git branch | ag -v '(staging|master)'"
+  branches = "!git branch | ag -v '\\b(staging|master)\\b'"
   recent-branches = branch -a --sort=committerdate
   tags = tag
   stashes = stash list
