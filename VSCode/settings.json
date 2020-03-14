@@ -37,7 +37,7 @@
     "*.scss.liquid": "scss"
   },
   "terminal.external.osxExec": "iTerm.app",
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Solarized Light",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.sideBar.location": "left",
   "workbench.activityBar.visible": false,
