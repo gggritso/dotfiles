@@ -241,6 +241,9 @@
   "gitlens.views.repositories.enabled": false,
   "gitlens.mode.statusBar.enabled": false,
   "gitlens.views.compare.files.layout": "list",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -248,17 +251,15 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.tree.renderIndentGuides": "none",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.dragAndDrop": false,
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "emmet.excludeLanguages": [
     "javascript"
   ],
   "zenMode.hideLineNumbers": false,
   "prettier.printWidth": 120,
+  "editor.dragAndDrop": false,
   "files.exclude": {
+    "**/node_modules/**": true,
     ".yarn": true,
     "tmp": true
   }
