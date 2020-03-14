@@ -66,8 +66,6 @@
   "search.smartCase": true,
   "gitlens.codeLens.authors.enabled": false,
   "editor.showFoldingControls": "mouseover",
-  "prettier.eslintIntegration": false,
-  "prettier.stylelintIntegration": true,
   "[scss]": {
     "editor.formatOnSave": false
   },
@@ -75,7 +73,8 @@
     "editor.formatOnSave": false
   },
   "[html]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[haml]": {
     "editor.tabSize": 2,
@@ -223,7 +222,6 @@
   "breadcrumbs.enabled": true,
   "breadcrumbs.symbolPath": "off",
   "extensions.ignoreRecommendations": true,
-  "search.location": "panel",
   "zenMode.fullScreen": false,
   "zenMode.hideStatusBar": false,
   "zenMode.hideTabs": false,
@@ -242,6 +240,26 @@
   "gitlens.statusBar.enabled": false,
   "gitlens.views.repositories.enabled": false,
   "gitlens.mode.statusBar.enabled": false,
+  "gitlens.views.compare.files.layout": "list",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "workbench.tree.renderIndentGuides": "none",
-  "editor.dragAndDrop": false
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.dragAndDrop": false,
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "emmet.excludeLanguages": [
+    "javascript"
+  ],
+  "zenMode.hideLineNumbers": false,
+  "prettier.printWidth": 120,
+  "files.exclude": {
+    ".yarn": true,
+    "tmp": true
+  }
 }
