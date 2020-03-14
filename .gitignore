@@ -7,6 +7,7 @@ fishd.*
 fish/completions
 
 fish/local.fish
+fish/fish_variables
 
 fish/functions/*
 !fish/functions/die.fish
@@ -15,5 +16,6 @@ fish/functions/*
 !fish/functions/la.fish
 !fish/functions/rimraf.fish
 !fish/functions/z.fish
+!fish/functions/zet.fish
 
 bin/ngrok
