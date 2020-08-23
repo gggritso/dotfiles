@@ -1,3 +1,4 @@
+if !exists('g:vscode')
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 
@@ -8,10 +9,11 @@ Plug 'tpope/vim-commentary'
 Plug 'altercation/vim-colors-solarized'
 
 Plug 'machakann/vim-highlightedyank'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'w0rp/ale'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'mxw/vim-jsx'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 set nocompatible
@@ -83,3 +85,16 @@ set nohlsearch
 set incsearch
 set showmatch
 set inccommand=nosplit
+endif
+
+" Better splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" FZF
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>t :BTags<CR>
+nnoremap <silent> <leader>m :Marks<CR>
