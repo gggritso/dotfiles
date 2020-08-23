@@ -3,9 +3,7 @@
   "editor.fontSize": 14,
   "editor.lineHeight": 20,
   "editor.lineNumbers": "relative",
-  "editor.rulers": [
-    120
-  ],
+  "editor.rulers": [120],
   "editor.wordWrapColumn": 120,
   "editor.wordWrap": "bounded",
   "editor.wrappingIndent": "indent",
@@ -49,7 +47,6 @@
   "git.checkoutType": "local",
   "window.zoomLevel": 0,
   "window.nativeTabs": true,
-  "editor.formatOnSave": true,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -252,9 +249,7 @@
   },
   "workbench.tree.renderIndentGuides": "none",
   "javascript.preferences.importModuleSpecifier": "non-relative",
-  "emmet.excludeLanguages": [
-    "javascript"
-  ],
+  "emmet.excludeLanguages": ["javascript"],
   "zenMode.hideLineNumbers": false,
   "prettier.printWidth": 120,
   "editor.dragAndDrop": false,
@@ -262,5 +257,6 @@
     "**/node_modules/**": true,
     ".yarn": true,
     "tmp": true
-  }
+  },
+  "editor.formatOnSave": true
 }
