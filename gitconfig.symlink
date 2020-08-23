@@ -74,6 +74,8 @@
   date = relative
 [push]
   default = current
+[pull]
+  ff = only
 [core]
   editor = nvim
   precomposeunicode = true
