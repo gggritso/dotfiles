@@ -258,5 +258,8 @@
     ".yarn": true,
     "tmp": true
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "workbench.preferredDarkColorTheme": "Solarized Dark",
+  "workbench.preferredLightColorTheme": "Solarized Light",
+  "window.autoDetectColorScheme": true
 }
