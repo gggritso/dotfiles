@@ -55,6 +55,8 @@
   submit = !git push && git autotrack
   whodunit = blame -wMC
   axe = log --reverse -p -w -S
+[color]
+  ui = auto 
 [advice]
   statusHints = false
 [diff]
@@ -67,9 +69,9 @@
 [interactive]
   diffFilter = diff-highlight
 [pager]
-  diff = diff-highlight | less
-  log = diff-highlight | less
-  show = diff-highlight | less
+  diff = less
+  log = less
+  show = less
 [blame]
   date = relative
 [push]
