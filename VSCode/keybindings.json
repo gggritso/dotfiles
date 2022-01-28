@@ -71,5 +71,9 @@
   {
     "key": "cmd+k cmd+right",
     "command": "-workbench.action.focusRightGroup"
+  },
+  {
+    "key": "shift+cmd+t",
+    "command": "workbench.action.reopenClosedEditor"
   }
 ]
