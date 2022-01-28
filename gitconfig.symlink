@@ -9,6 +9,7 @@
   nevermind = !git reset --hard HEAD && git clean -d -f
   uncommit = reset --mixed HEAD~
   save = commit -m
+  mash = "!env LEFTHOOK=0 git commit -m"
   resave = commit --amend -m
   fold = commit --amend --no-edit
   invert = revert
