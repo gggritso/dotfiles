@@ -25,7 +25,7 @@
   tags = tag
   stashes = stash list
   prestage = diff -w
-  precommit = diff -w --cached
+  precommit = diff -w --cached --color-moved
   remotes = remote -v
   move = mv
   remove = rm
