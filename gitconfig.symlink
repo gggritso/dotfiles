@@ -60,14 +60,10 @@
 [advice]
   statusHints = false
 [diff]
-  tool = vscode
   compactionHeuristic = true
   indentHeuristic = true
   algorithm = patience
-[difftool "vscode"]
-  cmd = code --wait --diff $LOCAL $REMOTE
-[interactive]
-  diffFilter = diff-highlight
+  colorMoved = true
 [pager]
   diff = less
   log = less
@@ -87,10 +83,7 @@
 [credential]
   helper = osxkeychain
 [merge]
-  tool = vscode
-  conflictstyle = diff3
-[mergetool "vscode"]
-  cmd = code --wait $MERGED
+  conflictstyle = zdiff3
 [mailmap]
   file = ~/.mailmap
 [merge "ours"]
