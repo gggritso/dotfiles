@@ -1,9 +1,6 @@
-brew install neovim
-mkdir ~/.config/nvim
-
-ln -s vimrc.symlink ~/.config/nvim/init.vim
-
-ln -s eslintrc ~/.eslintrc
-ln -s gitconfig.symlink ~/.gitconfig
-ln -s gitignore_global.symlink ~/.gitignore_global
-ln -s VSCode ~/Library/Application\ Support/Code/User
+ln -sf vimrc.symlink ~/.config/nvim/init.vim
+ln -sf eslintrc ~/.eslintrc
+ln -sf gitconfig.symlink ~/.gitconfig
+ln -sf gitignore_global.symlink ~/.gitignore_global
+ln -sf VSCode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+ln -sf VSCode/settings.json ~/Library/Application\ Support/Code/User/settings.json

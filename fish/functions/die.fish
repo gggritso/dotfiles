@@ -1,3 +1,0 @@
-function die
-  exit
-end
