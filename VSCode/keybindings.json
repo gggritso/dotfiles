@@ -75,5 +75,13 @@
   {
     "key": "shift+cmd+t",
     "command": "workbench.action.reopenClosedEditor"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.toggleAuxiliaryBar"
   }
 ]
