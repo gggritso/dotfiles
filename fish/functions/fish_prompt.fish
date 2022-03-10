@@ -1,5 +1,4 @@
 function fish_prompt
-  z --add "$PWD"
 
   set_color $fish_color_cwd
   echo -n (prompt_pwd)
