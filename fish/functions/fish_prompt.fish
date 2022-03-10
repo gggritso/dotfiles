@@ -6,6 +6,5 @@ function fish_prompt
   set_color magenta
   __fish_git_prompt
 
-  set_color red
-  echo -n " $MACHINE_LATIN_ID "
+  echo -n " "
 end

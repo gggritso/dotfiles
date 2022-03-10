@@ -28,8 +28,6 @@
   "files.trimTrailingWhitespace": true,
   "files.autoSave": "onFocusChange",
   "files.associations": {
-    "*.module": "php",
-    "*.inc": "php",
     "*.tmpl": "html",
     "*.jst.ejs": "ejs",
     "*.scss.liquid": "scss",
@@ -71,7 +69,6 @@
   },
   "[html]": {
     "editor.formatOnSave": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[haml]": {
     "editor.tabSize": 2,

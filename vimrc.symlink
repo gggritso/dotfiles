@@ -3,56 +3,16 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-" Plug 'tpope/vim-unimpaired'
-Plug 'machakann/vim-highlightedyank'
 
 if !exists('g:vscode')
-  Plug 'itchyny/lightline.vim'
-
-  Plug 'tpope/vim-fugitive'
-
   Plug 'altercation/vim-colors-solarized'
-
-  " Plug 'w0rp/ale'
-  Plug 'prettier/vim-prettier', {
-    \ 'do': 'yarn install',
-    \ 'for': ['javascript', 'json'] }
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
   Plug 'sheerun/vim-polyglot'
-
-  let g:lightline = {
-  \ 'colorscheme': 'solarized',
-  \ 'component_function': {
-  \   'filename': 'LightlineFilename',
-  \ },
-  \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ],
-  \           [ 'readonly', 'filename', 'modified' ] ],
-  \   'right': [ [ 'lineinfo' ], [ 'linter_warnings', 'linter_errors', 'linter_ok' ] ],
-  \ }
-  \ }
-
-  function! LightlineFilename()
-    let root = fnamemodify(get(b:, 'git_dir'), ':h')
-    let path = expand('%:p')
-    if path[:len(root)-1] ==# root
-      return path[len(root)+1:]
-    endif
-    return expand('%')
-  endfunction
 end
 
 call plug#end()
 
 set nocompatible
 set encoding=utf-8
-
-" Bindings
-let mapleader = "\<space>"
-
-" nmap j gj
-" nmap k gk
 
 set noshowmode
 set laststatus=2
@@ -105,30 +65,3 @@ set incsearch
 set showmatch
 set inccommand=nosplit
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
-
-if !exists('g:vscode')
-  " Better splits
-  nnoremap <C-J> <C-W><C-J>
-  nnoremap <C-K> <C-W><C-K>
-  nnoremap <C-L> <C-W><C-L>
-  nnoremap <C-H> <C-W><C-H>
-
-  " FZF
-  let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
-  nnoremap <silent> <leader>b :Buffers<CR>
-  nnoremap <silent> <leader>f :Files<CR>
-  " nnoremap <silent> <leader>t :BTags<CR>
-  " nnoremap <silent> <leader>m :Marks<CR>
-
-  " Prettier
-  let g:prettier#autoformat_require_pragma = 0
-end
-
-" Visual mode .
-" :xnoremap . :norm.<CR>
-
-" rg
-if executable("rg")
-  set grepprg=rg\ --vimgrep\ --smart-case\ --hidden
-  set grepformat=%f:%l:%c:%m,%f:%l:%m
-endif
