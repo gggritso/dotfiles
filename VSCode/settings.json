@@ -32,10 +32,11 @@
     "*.inc": "php",
     "*.tmpl": "html",
     "*.jst.ejs": "ejs",
-    "*.scss.liquid": "scss"
+    "*.scss.liquid": "scss",
+    "*.js": "javascriptreact"
   },
   "terminal.external.osxExec": "iTerm.app",
-  "workbench.colorTheme": "Solarized Light",
+  "workbench.colorTheme": "Solarized Dark",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.sideBar.location": "left",
   "workbench.activityBar.visible": false,
@@ -45,7 +46,6 @@
   "workbench.editor.tabCloseButton": "left",
   "git.confirmSync": false,
   "git.checkoutType": "local",
-  "window.zoomLevel": 0,
   "window.nativeTabs": true,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
@@ -92,129 +92,11 @@
     "ignoreFiles": "**/*.js"
   },
   "terminal.integrated.fontSize": 14,
-  "terminal.integrated.lineHeight": 1,
+  "terminal.integrated.lineHeight": 1.428,
   "problems.decorations.enabled": false,
-  "coffeelinter.defaultRules": {
-    "arrow_spacing": {
-      "level": "ignore"
-    },
-    "braces_spacing": {
-      "level": "ignore"
-    },
-    "camel_case_classes": {
-      "level": "ignore"
-    },
-    "colon_assignment_spacing": {
-      "level": "ignore"
-    },
-    "cyclomatic_complexity": {
-      "level": "ignore"
-    },
-    "duplicate_key": {
-      "level": "error"
-    },
-    "empty_constructor_needs_parens": {
-      "level": "ignore"
-    },
-    "ensure_comprehensions": {
-      "level": "ignore"
-    },
-    "eol_last": {
-      "level": "ignore"
-    },
-    "indentation": {
-      "level": "ignore"
-    },
-    "line_endings": {
-      "level": "ignore",
-      "value": "unix"
-    },
-    "max_line_length": {
-      "level": "ignore"
-    },
-    "missing_fat_arrows": {
-      "level": "ignore"
-    },
-    "newlines_after_classes": {
-      "level": "ignore"
-    },
-    "no_backticks": {
-      "level": "ignore"
-    },
-    "no_debugger": {
-      "level": "ignore"
-    },
-    "no_empty_functions": {
-      "level": "ignore"
-    },
-    "no_empty_param_list": {
-      "level": "ignore"
-    },
-    "no_implicit_braces": {
-      "level": "ignore"
-    },
-    "no_implicit_parens": {
-      "level": "ignore",
-      "strict": true
-    },
-    "no_interpolation_in_single_quotes": {
-      "level": "ignore"
-    },
-    "no_nested_string_interpolation": {
-      "level": "ignore"
-    },
-    "no_plusplus": {
-      "level": "ignore"
-    },
-    "no_private_function_fat_arrows": {
-      "level": "ignore"
-    },
-    "no_stand_alone_at": {
-      "level": "ignore"
-    },
-    "no_tabs": {
-      "level": "ignore"
-    },
-    "no_this": {
-      "level": "ignore"
-    },
-    "no_throwing_strings": {
-      "level": "ignore"
-    },
-    "no_trailing_semicolons": {
-      "level": "ignore"
-    },
-    "no_trailing_whitespace": {
-      "level": "ignore"
-    },
-    "no_unnecessary_double_quotes": {
-      "level": "ignore"
-    },
-    "no_unnecessary_fat_arrows": {
-      "level": "ignore"
-    },
-    "non_empty_constructor_needs_parens": {
-      "level": "ignore"
-    },
-    "prefer_english_operator": {
-      "level": "ignore"
-    },
-    "space_operators": {
-      "level": "ignore"
-    },
-    "spacing_after_comma": {
-      "level": "ignore"
-    },
-    "transform_messes_up_line_numbers": {
-      "level": "ignore"
-    }
-  },
-  "docker.showExplorer": false,
   "gitlens.historyExplorer.enabled": true,
-  "ruby.lint": {
-    "rubocop": true
-  },
   "css.validate": false,
+  "less.validate": false,
   "scss.validate": false,
   "breadcrumbs.enabled": true,
   "breadcrumbs.symbolPath": "off",
@@ -261,5 +143,30 @@
   "editor.formatOnSave": true,
   "workbench.preferredDarkColorTheme": "Solarized Dark",
   "workbench.preferredLightColorTheme": "Solarized Light",
-  "window.autoDetectColorScheme": true
+  "window.autoDetectColorScheme": true,
+  "javascript.preferences.importModuleSpecifierEnding": "minimal",
+  "git.enableSmartCommit": true,
+  "cSpell.words": [
+    "lifecycle",
+    "testid",
+    "primarycolor",
+    "upsell",
+    "callout",
+    "checkmark",
+    "formatui",
+    "freemium",
+    "keycodes",
+    "strikethrough",
+    "artboard",
+    "middlewares",
+    "proplus",
+    "multisub",
+    "braintree",
+    "cloudinary"
+  ],
+  "terminal.integrated.copyOnSelection": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "editor.bracketPairColorization.enabled": true
 }
