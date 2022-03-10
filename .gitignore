@@ -3,11 +3,13 @@
 
 fish_history
 fishd.*
+fish/fish_plugins
 
 fish/completions
 
 fish/local.fish
 fish/fish_variables
+fish/conf.d
 
 fish/functions/*
 !fish/functions/die.fish
