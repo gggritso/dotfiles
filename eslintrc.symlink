@@ -1,5 +1,5 @@
 {
-  "plugins": ["prettier"],
+  "plugins": [],
   "rules": {
     "linebreak-style": [2, "unix"],
     "no-multi-spaces": 1,
@@ -20,7 +20,6 @@
       2,
       { "min": 2, "exceptions": ["$", "q", "s", "i", "x", "y"] }
     ],
-    "prettier/prettier": "error"
   },
   "env": {
     "browser": true,
@@ -30,5 +29,5 @@
   "parserOptions": {
     "ecmaVersion": 2015
   },
-  "extends": ["eslint:recommended", "plugin:prettier/recommended"]
+  "extends": ["eslint:recommended"]
 }

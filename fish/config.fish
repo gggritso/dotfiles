@@ -1,6 +1,10 @@
-set -U EDITOR nvim
+set -gx EDITOR nvim
 
 eval (/opt/homebrew/bin/brew shellenv)
+status --is-interactive; and rbenv init - fish | source
+
+status is-login; and pyenv init --path | source
+status is-interactive; and pyenv init - | source
 
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showupstream 'yes'

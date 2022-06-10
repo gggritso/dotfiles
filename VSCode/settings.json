@@ -11,14 +11,13 @@
   "editor.snippetSuggestions": "top",
   "editor.insertSpaces": true,
   "editor.renderWhitespace": "selection",
-  "editor.renderIndentGuides": false,
   "editor.trimAutoWhitespace": false,
   "editor.cursorStyle": "block",
   "editor.cursorBlinking": "blink",
   "editor.renderLineHighlight": "none",
   "editor.hideCursorInOverviewRuler": true,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.autoIndent": true,
+  "editor.autoIndent": "full",
   "editor.colorDecorators": false,
   "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
@@ -34,7 +33,7 @@
     "*.js": "javascriptreact"
   },
   "terminal.external.osxExec": "iTerm.app",
-  "workbench.colorTheme": "Solarized Light",
+  "workbench.colorTheme": "Solarized Dark",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.sideBar.location": "left",
   "workbench.activityBar.visible": false,
@@ -68,7 +67,7 @@
     "editor.formatOnSave": false
   },
   "[html]": {
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": false
   },
   "[haml]": {
     "editor.tabSize": 2,
@@ -163,7 +162,9 @@
   ],
   "terminal.integrated.copyOnSelection": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
   "terminal.integrated.defaultProfile.osx": "fish",
-  "editor.bracketPairColorization.enabled": true
+  "editor.bracketPairColorization.enabled": true,
+  "prettier.requireConfig": true,
+  "editor.guides.indentation": false
 }
