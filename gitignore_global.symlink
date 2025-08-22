@@ -16,3 +16,5 @@ tmp
 
 node_modules
 .VSCode
+
+__pycache__
