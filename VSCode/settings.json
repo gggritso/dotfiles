@@ -20,7 +20,6 @@
   "editor.autoIndent": "full",
   "editor.colorDecorators": false,
   "editor.minimap.enabled": false,
-  "editor.minimap.renderCharacters": false,
   "editor.folding": true,
   "explorer.confirmDragAndDrop": false,
   "files.insertFinalNewline": true,
@@ -28,35 +27,25 @@
   "files.autoSave": "onFocusChange",
   "files.associations": {
     "*.tmpl": "html",
-    "*.jst.ejs": "ejs",
-    "*.scss.liquid": "scss",
-    "*.js": "javascriptreact"
+    "*.jst.ejs": "ejs"
+    // "*.js": "javascriptreact",
+    // "*.tsx": "typescriptreact"
   },
   "terminal.external.osxExec": "iTerm.app",
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Solarized Light",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.sideBar.location": "left",
-  "workbench.activityBar.visible": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "workbench.statusBar.visible": true,
   "workbench.startupEditor": "none",
-  "workbench.editor.tabCloseButton": "left",
   "git.confirmSync": false,
-  "git.checkoutType": "local",
-  "window.nativeTabs": true,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
     "suppressFileNotUnderSourceControlWarning": false,
     "suppressGitVersionWarning": false,
     "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": false,
-    "suppressShowKeyBindingsNotice": true,
-    "suppressUpdateNotice": true,
-    "suppressWelcomeNotice": false
+    "suppressNoRepositoryWarning": false
   },
-  "editor.minimap.showSlider": "always",
   "search.smartCase": true,
   "gitlens.codeLens.authors.enabled": false,
   "editor.showFoldingControls": "mouseover",
@@ -69,28 +58,28 @@
   "[html]": {
     "editor.formatOnSave": false
   },
-  "[haml]": {
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true
-  },
   "[yaml]": {
     "editor.formatOnSave": false
+  },
+  "[csv]": {
+    "editor.formatOnSave": false,
+    "editor.wordWrap": "off"
   },
   "[log]": {
     "editor.rulers": [],
     "editor.wordWrap": "off"
   },
+  "[mdx]": {
+    "editor.rulers": [],
+    "editor.wordWrap": "bounded"
+  },
   "[plaintext]": {
     "editor.rulers": [],
     "editor.wordWrap": "off"
   },
-  "stylelint.configOverrides": {
-    "ignoreFiles": "**/*.js"
-  },
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.lineHeight": 1.428,
   "problems.decorations.enabled": false,
-  "gitlens.historyExplorer.enabled": true,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
@@ -99,44 +88,27 @@
   "extensions.ignoreRecommendations": true,
   "zenMode.fullScreen": false,
   "zenMode.hideStatusBar": false,
-  "zenMode.hideTabs": false,
-  "gitlens.views.fileHistory.enabled": true,
-  "gitlens.views.lineHistory.enabled": true,
-  "workbench.statusBar.feedback.visible": false,
   "workbench.fontAliasing": "auto",
   "workbench.editor.centeredLayoutAutoResize": false,
-  "workbench.editor.showTabs": true,
+  "workbench.editor.showTabs": "multiple",
   "workbench.editor.closeEmptyGroups": false,
   "workbench.panel.defaultLocation": "right",
-  "workbench.list.keyboardNavigation": "filter",
   "gitlens.blame.heatmap.enabled": false,
   "gitlens.blame.highlight.enabled": false,
   "gitlens.codeLens.enabled": false,
   "gitlens.statusBar.enabled": false,
-  "gitlens.views.repositories.enabled": false,
   "gitlens.mode.statusBar.enabled": false,
-  "gitlens.views.compare.files.layout": "list",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "workbench.tree.renderIndentGuides": "none",
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "emmet.excludeLanguages": ["javascript"],
   "zenMode.hideLineNumbers": false,
-  "prettier.printWidth": 120,
   "editor.dragAndDrop": false,
   "files.exclude": {
-    "**/node_modules/**": true,
     ".yarn": true,
+    "**/__pycache__": true,
+    "**/node_modules/**": true,
     "tmp": true
   },
-  "editor.formatOnSave": true,
   "workbench.preferredDarkColorTheme": "Solarized Dark",
   "workbench.preferredLightColorTheme": "Solarized Light",
   "window.autoDetectColorScheme": true,
@@ -145,26 +117,59 @@
   "cSpell.words": [
     "lifecycle",
     "testid",
-    "primarycolor",
     "upsell",
     "callout",
     "checkmark",
-    "formatui",
-    "freemium",
-    "keycodes",
     "strikethrough",
-    "artboard",
-    "middlewares",
-    "proplus",
-    "multisub",
-    "braintree",
-    "cloudinary"
+    "snuba",
+    "testutils",
+    "contentful",
+    "apdex",
+    "pageload",
+    "nodestore",
+    "quantile",
+    "sparkline",
+    "ClickHouse",
+    "datetime",
+    "timeseries",
+    "hovercard",
+    "sqlish",
+    "echarts"
   ],
   "terminal.integrated.copyOnSelection": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
   "terminal.integrated.defaultProfile.osx": "fish",
   "editor.bracketPairColorization.enabled": true,
-  "prettier.requireConfig": true,
-  "editor.guides.indentation": false
+  "editor.guides.indentation": false,
+  "editor.stickyScroll.enabled": true,
+  "search.useGlobalIgnoreFiles": true,
+  "git.mergeEditor": false,
+  "git.path": "/opt/homebrew/bin/git",
+  "python.analysis.typeCheckingMode": "basic",
+  "cSpell.enableFiletypes": ["mdx"],
+  "python.testing.autoTestDiscoverOnSaveEnabled": false,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "workbench.activityBar.location": "hidden",
+  "workbench.editor.tabActionLocation": "left",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "editor.rulers": [120],
+    "editor.semanticHighlighting.enabled": true
+  },
+  "editor.codeActionsOnSave": {},
+  "editor.accessibilitySupport": "off",
+  "editor.copyWithSyntaxHighlighting": false
 }
