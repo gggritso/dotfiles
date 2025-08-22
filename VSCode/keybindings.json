@@ -37,6 +37,10 @@
     "command": "workbench.action.openEditorAtIndex9"
   },
   {
+    "key": "shift+cmd+e",
+    "command": "workbench.view.explorer"
+  },
+  {
     "key": "shift+cmd+g",
     "command": "workbench.view.scm"
   },
@@ -71,5 +75,9 @@
   {
     "key": "cmd+j",
     "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "alt+cmd+b",
+    "command": "-workbench.action.toggleAuxiliaryBar"
   }
 ]
