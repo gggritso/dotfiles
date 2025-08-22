@@ -1,0 +1,60 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "auto_update": false,
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "title_bar": {
+    "show_branch_icon": true,
+    "show_onboarding_banner": true,
+    "show_user_picture": false,
+    "show_sign_in": true,
+    "show_menus": false
+  },
+  "collaboration_panel": { "button": false },
+  "notification_panel": { "button": false },
+  "debugger": { "button": false },
+  "show_edit_predictions": false,
+  "buffer_font_family": "SF Mono",
+  "theme": {
+    "light": "Zed Legacy: Solarized Light",
+    "dark": "Zed Legacy: Solarized Dark",
+    "mode": "system"
+  },
+  "soft_wrap": "editor_width",
+  "show_wrap_guides": false,
+  "vim_mode": true,
+  "relative_line_numbers": true,
+  "search": {
+    "regex": true
+  },
+  "terminal": {
+    "copy_on_select": false,
+    "shell": "system",
+    "dock": "right",
+    "working_directory": "current_project_directory",
+    "detect_venv": {
+      "on": {
+        "directories": [".venv"],
+        "activate_script": "fish"
+      }
+    }
+  },
+  "git": {
+    "hunk_style": "unstaged_hollow"
+  },
+  "agent": {
+    "always_allow_tool_actions": true,
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    }
+  }
+}
