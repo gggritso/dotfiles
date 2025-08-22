@@ -67,7 +67,7 @@
   algorithm = patience
   colorMoved = true
 [pager]
-  diff = less
+  diff = /opt/homebrew/opt/git/share/git-core/contrib/diff-highlight/diff-highlight | less
   log = less
   show = less
 [blame]
