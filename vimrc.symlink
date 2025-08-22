@@ -21,7 +21,9 @@ set cmdheight=1
 syntax enable
 
 set background=light
-colorscheme solarized
+if !exists('g:vscode')
+  colorscheme solarized
+end
 
 set guifont=SF\ Mono:h16
 
