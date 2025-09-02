@@ -1,0 +1,42 @@
+[
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-1": ["pane::ActivateItem", 0],
+      "cmd-2": ["pane::ActivateItem", 1],
+      "cmd-3": ["pane::ActivateItem", 2],
+      "cmd-4": ["pane::ActivateItem", 3],
+      "cmd-5": ["pane::ActivateItem", 4],
+      "cmd-6": ["pane::ActivateItem", 5],
+      "cmd-7": ["pane::ActivateItem", 6],
+      "cmd-8": ["pane::ActivateItem", 7],
+      "cmd-9": ["pane::ActivateItem", 8]
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w l": "workspace::ActivatePaneRight",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "s": ["vim::PushSneak", {}],
+      "S": ["vim::PushSneakBackward", {}]
+    }
+  },
+  {
+    "context": "VimControl && !menu && vim_mode != operator",
+    "bindings": {
+      "w": "vim::NextSubwordStart",
+      "b": "vim::PreviousSubwordStart",
+      "e": "vim::NextSubwordEnd",
+      "g e": "vim::PreviousSubwordEnd"
+    }
+  }
+]
+
