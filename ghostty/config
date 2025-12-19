@@ -1,3 +1,6 @@
 font-family = SF Mono
 font-size = 16
 theme = light:Selenized Light,dark:Selenized Dark
+
+keybind = ctrl+w>h=goto_split:left
+keybind = ctrl+w>l=goto_split:right
