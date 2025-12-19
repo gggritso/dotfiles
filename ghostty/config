@@ -1,5 +1,5 @@
 font-family = SF Mono
-font-size = 16
+font-size = 14
 theme = light:Selenized Light,dark:Selenized Dark
 
 keybind = ctrl+w>h=goto_split:left
