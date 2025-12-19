@@ -2,14 +2,11 @@
   name = George Gritsouk
   email = 989898+gggritso@users.noreply.github.com
 [alias]
-  comit = commit
-  commmit = commit
   unstage = reset -q HEAD --
   discard = checkout --
   nevermind = !git reset --hard HEAD && git clean -d -f
   uncommit = reset --mixed HEAD~
   save = commit -m
-  mash = "!env LEFTHOOK=0 git commit -m"
   resave = commit --amend -m
   fold = commit --amend --no-edit
   invert = revert
@@ -35,30 +32,24 @@
   what = show
   show-last = show HEAD
   untrack = rm -r --cached
-  rewrite = rebase -i
   back = checkout "-"
-  contributors = shortlog -s -n --no-merges
   file-trail = log --follow -p -w
   merge-trail = log --ancestry-path --merges
   unmerged-files = diff --name-only
   patch = add --patch
   tuck = stash save -u
-  current-branch = rev-parse --abbrev-ref HEAD
   untuck = stash pop "stash@{0}"
+  current-branch = rev-parse --abbrev-ref HEAD
   boop = "!f() { B=$(git current-branch); git commit --allow-empty -m 'Boop!'; git push origin $B; }; f"
   aliases = !git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\:\\ /
   autotrack = "!f() { B=$(git current-branch); git branch --set-upstream-to=origin/$B; }; f"
-  into = "!f() { B=$(git current-branch); git checkout $1; git pull; git merge $B --no-edit; }; f"
-  into-staging = "!f() { B=$(git current-branch); git checkout staging; git pull; git merge $B --no-edit; }; f"
-  into-master = "!f() { B=$(git current-branch); git checkout master; git pull; git merge $B --no-edit; }; f"
-  onto = "!f() { B=$(git current-branch); git checkout master; git pull; git checkout $B; git rebase -i $1; }; f"
   work-log = !git log --reverse master...HEAD --format=format:'- %w(0,0,4)%B'
   submit = !git push && git autotrack
   whodunit = blame -wMC
   axe = log --reverse -p -w -S
   crimes = commit -a --no-verify -m "Crimes"
 [color]
-  ui = auto 
+  ui = auto
 [advice]
   statusHints = false
 [diff]
