@@ -6,4 +6,4 @@ ln -sf ~/Code/dotfiles/zed/settings.json ~/.config/zed/settings.json
 ln -sf ~/Code/dotfiles/fish/config.fish ~/.config/fish/config.fish
 ln -sf ~/Code/dotfiles/fish/fish_plugins ~/.config/fish/fish_plugins
 ln -sf ~/Code/dotfiles/ghostty/config ~/.config/ghostty/config
-touch ~/.config/fish/fish.local
+touch ~/.config/fish/local.fish
