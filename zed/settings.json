@@ -31,7 +31,7 @@
   "soft_wrap": "editor_width",
   "show_wrap_guides": false,
   "vim_mode": true,
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "search": {
     "regex": true
   },
