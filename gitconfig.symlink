@@ -18,7 +18,7 @@
   new-branch = checkout -b
   rename-branch = branch -m
   delete-branch = branch -D
-  branches = "!git branch | ag -v '\\b(staging|master)\\b'"
+  branches = "!git branch | rg -v '\\b(main|master)\\b'"
   recent-branches = branch -a --sort=committerdate
   tags = tag
   stashes = stash list
