@@ -8,8 +8,8 @@ set __fish_git_prompt_showuntrackedfiles 'yes'
 
 set __fish_git_prompt_char_dirtystate '∂'
 set __fish_git_prompt_char_upstream_prefix ''
-set __fish_git_prompt_char_upstream_ahead ' ↑'
-set __fish_git_prompt_char_upstream_behind ' ↓'
+set __fish_git_prompt_char_upstream_ahead '↑'
+set __fish_git_prompt_char_upstream_behind '↓'
 set __fish_git_prompt_char_upstream_equal ''
 
 if test -e ~/.config/fish/local.fish
