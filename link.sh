@@ -1,4 +1,4 @@
-ln -sf ~/Code/dotfiles/vimrc.symlink ~/.config/nvim/init.vim
+ln -sf ~/Code/dotfiles/vim/init.vim.symlink ~/.config/nvim/init.vim
 ln -sf ~/Code/dotfiles/git/gitconfig.symlink ~/.gitconfig
 ln -sf ~/Code/dotfiles/git/gitignore_global.symlink ~/.gitignore_global
 ln -sf ~/Code/dotfiles/zed/keymap.json ~/.config/zed/keymap.json
