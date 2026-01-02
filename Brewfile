@@ -1,5 +1,6 @@
 brew "coreutils"
 brew "fish"
 brew "git"
+brew "gh"
 brew "neovim"
 brew "ripgrep"
