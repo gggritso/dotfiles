@@ -15,3 +15,6 @@ set __fish_git_prompt_char_upstream_equal ''
 if test -e ~/.config/fish/local.fish
   source ~/.config/fish/local.fish
 end
+
+# This is a common path for 3rd party utilities
+export PATH="$HOME/.local/bin:$PATH"
